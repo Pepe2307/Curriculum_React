@@ -19,10 +19,21 @@ function About() {
                 <div className="about-description">
                     <h2 style={{color: theme.primary}}>{aboutData.title}</h2>
                     <p style={{color:theme.tertiary80}}>
-                    Pablo/Pepe, un <b>Estudiante avanzado de la Lic. en Sistemas</b> en la Universidad de General Sarmiento donde aprendi los fundamentos de la programacion para luego poder dedicarme a estudiar el <b>Desarrollo Web Fullstack</b> por medio de clases con Coderhouse, EducacionIt y de forma autodidacta
-                    <br/><br/>Soy alguien que se considera aventurera, optimista, atleta y que <b>aspira a 
-                    ser una mejor persona cada dia</b>. Siempre estoy en busca de nuevas aventuras y desafíos, me encanta conocer gente 
-                    nueva y hacer amigos, disfruto perdiéndome en los videojuegos, series, tecnología y cuidando de animales de la calle. Siempre listo para vivir al máximo y <b>disfrutar de todo lo que la vida tiene para ofrecer.</b></p>
+                    <b>Mi viaje en el conocimiento:</b> 👨‍🎓
+                    <br/><br/>
+                    Pablo/Pepe, un <b>Estudiante avanzado de la Lic. en Sistemas</b> en la Universidad de General Sarmiento, donde aprendí los fundamentos de la programacion.
+                    <br/>Luego encontré el <b>Desarrollo Web Fullstack</b> estudiando con Coderhouse, EducacionIT y de forma autodidacta.
+                    <br/>Al mismo tiempo que sigo absorbiendo nuevos conocimientos estoy trabajando como <b>Profesor en Robotica, Impresión y Diseño 3D y Programacion.</b>
+                    
+                    
+                    <br/><br/><br/>
+                    <b>Mi personalidad:</b> 🦝
+                    <br/><br/>
+                    Soy alguien aventurero, optimista, atleta y que cada dia se enamora mas de la naturaleza y el mundo.
+                    <br/>
+                    constantemente <b>aspiro a 
+                    ser una mejor persona cada dia</b> por medio de la <b>filosofia estoica y enseñanzas budistas</b>, mi lema es que la verdadera sabiduria se logra cuando se encuentra a un maestro en todo a su alrededor.
+                    <br/> Siempre estoy en busca de nuevas aventuras y desafíos. Mis pasatiempos son los videojuegos, series, tecnología y el rescate de animales en situaciones precarias en conjunto con mi vecina.</p>
                 </div>
                 <div className="about-img">
                     <img 

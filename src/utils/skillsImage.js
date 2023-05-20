@@ -9,6 +9,7 @@ import javascript from '../assets/svg/skills/javascript.svg'
 import microsoftoffice from '../assets/svg/skills/microsoftoffice.svg'
 import mysql from '../assets/svg/skills/mysql.svg'
 import nextJS from '../assets/svg/skills/nextJS.svg'
+import nodejs from '../assets/svg/skills/nodejs.svg'
 import photoshop from '../assets/svg/skills/photoshop.svg'
 import php from '../assets/svg/skills/php.svg'
 import python from '../assets/svg/skills/python.svg'
@@ -22,6 +23,8 @@ export const skillsImage = (skill) => {
     switch (skillID) {
         case 'ubuntu':
             return ubuntu;
+        case 'node js':
+            return nodejs;
         case 'html':
             return html;
         case 'photoshop':

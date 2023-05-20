@@ -6,8 +6,6 @@
     'MySQL',
     'Python',
     'Photoshop',
-    'Next JS', /* ? */
-    'Microsoft Office',
     'Ubuntu',
     'Bootstrap',
     'PHP',

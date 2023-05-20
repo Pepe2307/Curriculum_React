@@ -20,7 +20,7 @@ function Main() {
             {/* <Achievement />
             <Blog /> */}
             <Contacts />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
