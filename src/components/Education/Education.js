@@ -26,9 +26,21 @@ function Education() {
                         />
                     ))}
                 </div>
-                <div className="education-image">
-                    <img src={theme.eduimg} alt=""/>
+
+
+                <div class="row">
+                <div class="example-2 card">
+                    <div class="wrapper">
+                    <div class="data">
+                        <div class="content">
+                        <h1 class="title"><a href="#">Equipo de Profesores IT</a></h1>
+                        </div>
+                    </div>
+                    </div>
                 </div>
+                </div>     
+                
+                      
             </div>
         </div>
     )

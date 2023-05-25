@@ -170,7 +170,7 @@ function Contacts() {
                 <h1 style={{ color: theme.primary }}>Contacto</h1>
                 <div className='contacts-body'>
                     
-
+        
                     <div className='contacts-details'>
                         <a
                             className='personal-details'
@@ -225,11 +225,6 @@ function Contacts() {
                     </div>
                 </div>
             </div>
-            <img
-                src={theme.contactsimg}
-                alt='contacts'
-                className='contacts--img'
-            />
         </div>
     );
 }

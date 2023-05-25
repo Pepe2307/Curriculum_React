@@ -27,10 +27,10 @@ export const educationData = [
     },
     {
         id: 5,
-        institution: 'Constantemente aprendiendo nuevas tecnologias',
-        course: 'Autodidacta',
-        startYear: '1999 ',
-        endYear: '- Presente'
+        institution: 'EF SET ',
+        course: 'English Certificate - (C2 Proficient) - Maximo Nivel',
+        startYear: '2021',
+        endYear: ''
     },
     
 ]

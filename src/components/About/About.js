@@ -2,6 +2,7 @@ import './About.css';
 
 import React, { useContext } from 'react';
 
+import {Blog} from '../../components'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { aboutData } from '../../data/aboutData'
 
@@ -35,12 +36,9 @@ function About() {
                     ser una mejor persona cada dia</b> por medio de la <b>filosofia estoica y enseñanzas budistas</b>, mi lema es que la verdadera sabiduria se logra cuando se encuentra a un maestro en todo a su alrededor.
                     <br/> Siempre estoy en busca de nuevas aventuras y desafíos. Mis pasatiempos son los videojuegos, series, tecnología y el rescate de animales en situaciones precarias en conjunto con mi vecina.</p>
                 </div>
-                <div className="about-img">
-                    <img 
-                        src={aboutData.image === 2 ? theme.aboutimg1 : theme.aboutimg2}  
-                        alt="" 
-                    />
-                </div>
+
+                
+                <Blog />
             </div>
         </div>
 

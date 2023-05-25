@@ -1,13 +1,13 @@
-import React,{ useContext} from 'react';
-import { Link } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
-import { HiArrowRight } from "react-icons/hi";
-
 import './Blog.css';
+
+import React,{ useContext } from 'react';
+
+import { HiArrowRight } from "react-icons/hi";
+import { Link } from 'react-router-dom'
+import SingleBlog from './SingleBlog/SingleBlog';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { blogData } from '../../data/blogData'
-import SingleBlog from './SingleBlog/SingleBlog';
-
+import { makeStyles } from '@material-ui/core/styles';
 
 function Blog() {
 
@@ -45,7 +45,7 @@ function Blog() {
             {blogData.length > 0 && (
                 <div className="blog" id="blog" style={{backgroundColor: theme.secondary}}>
                     <div className="blog--header">
-                        <h1 style={{color: theme.primary}}>Blog</h1>
+                        <h1 style={{color: theme.primary}}>Usina UTEC</h1>
                     </div>
                     <div className="blog--body">
                         <div className="blog--bodyContainer">

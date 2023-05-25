@@ -1,15 +1,16 @@
-import React, { useContext, useState } from 'react'
-import { Helmet } from 'react-helmet'
-import { Grid } from '@material-ui/core'
-import { Link } from 'react-router-dom'
-import { makeStyles } from '@material-ui/core/styles';
-import { AiOutlineHome } from "react-icons/ai";
-
 import './BlogPage.css'
+
+import React, { useContext, useState } from 'react'
+
+import { AiOutlineHome } from "react-icons/ai";
+import { Grid } from '@material-ui/core'
+import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
 import { SingleBlog } from '../../components'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { blogData } from '../../data/blogData'
 import { headerData } from '../../data/headerData'
+import { makeStyles } from '@material-ui/core/styles';
 
 function BlogPage() {
 
@@ -71,13 +72,13 @@ function BlogPage() {
     return (
         <div className="blogPage" style={{backgroundColor: theme.secondary}}>
             <Helmet>
-                <title>{headerData.name} | Blog</title>
+                <title> Usina UTEC </title>
             </Helmet>
             <div className="blogPage--header" style={{backgroundColor: theme.primary}}>
                 <Link to="/">
                     <AiOutlineHome className={classes.home}/>
                 </Link>
-                <h1 style={{color: theme.secondary}}>Blogs</h1>
+                <h1 style={{color: theme.secondary}}>Usina UTEC</h1>
             </div>
             <div className="blogPage--container">
                 <div className="blog--search">
