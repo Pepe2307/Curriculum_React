@@ -14,8 +14,6 @@ import photoshop from '../assets/svg/skills/photoshop.svg'
 import php from '../assets/svg/skills/php.svg'
 import python from '../assets/svg/skills/python.svg'
 import react from '../assets/svg/skills/react.svg'
-import tailwind from '../assets/svg/skills/tailwind.svg'
-import typescript from '../assets/svg/skills/typescript.svg'
 import ubuntu from '../assets/svg/skills/ubuntu.svg'
 
 export const skillsImage = (skill) => {
@@ -37,14 +35,10 @@ export const skillsImage = (skill) => {
             return nextJS;
         case 'react':
             return react;
-        case 'typescript':
-            return typescript;
         case 'bootstrap':
             return bootstrap;
         case 'mysql':
             return mysql;
-        case 'tailwind':
-            return tailwind;
         case 'java':
             return java;
         case 'php':

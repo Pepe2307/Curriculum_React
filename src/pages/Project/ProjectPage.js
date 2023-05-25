@@ -8,7 +8,6 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import { SingleProject } from '../../components';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { headerData } from '../../data/headerData'
 import { makeStyles } from '@material-ui/core/styles';
 import { projectsData } from '../../data/projectsData'
 

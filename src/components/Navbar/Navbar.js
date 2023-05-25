@@ -222,24 +222,6 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
-                                to='/#education'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <HiDocumentText
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Educacion
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
                                 to='/#skills'
                                 smooth={true}
                                 spy='true'
@@ -251,6 +233,24 @@ function Navbar() {
                                     />
                                     <span className={classes.drawerLinks}>
                                         TechStack
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        <Fade left>
+                            <NavLink
+                                to='/#education'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <HiDocumentText
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Educacion
                                     </span>
                                 </div>
                             </NavLink>
@@ -273,6 +273,7 @@ function Navbar() {
                                 </div>
                             </NavLink>
                         </Fade>
+
 
                         <Fade left>
                             <NavLink

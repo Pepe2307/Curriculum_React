@@ -1,11 +1,8 @@
-import eleven from '../assets/svg/projects/eleven.svg'
 import screenshot1 from '../assets/png/proyecto_screenshot_1.jpg'
 import screenshot2 from '../assets/png/proyecto_screenshot_2.jpg'
 import screenshot3 from '../assets/png/proyecto_screenshot_3.jpg'
 import screenshot4 from '../assets/png/proyecto_screenshot_4.jpg'
 import screenshot5 from '../assets/png/proyecto_screenshot_5.jpg'
-import three from '../assets/svg/projects/three.svg'
-import two from '../assets/svg/projects/two.svg'
 
 export const projectsData = [
     {
@@ -40,7 +37,7 @@ export const projectsData = [
         projectName: 'App de Clima',
         projectDesc: 'Aplicacion hecha con React, se incluye cambio de idoma, uso de la API OpenWeather, y cambio de fondo dependiendo los datos de la misma API',
         tags: ['HTML' ,'CSS', 'Javascript', 'React', 'Vercel'],
-        code: 'https://github.com/Pepe2307',
+        code: 'https://github.com/Pepe2307/Clima_React',
         demo: 'https://pablo-clima.vercel.app/',
         image: screenshot4
     },

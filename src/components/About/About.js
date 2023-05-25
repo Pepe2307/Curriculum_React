@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 
 import {Blog} from '../../components'
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { aboutData } from '../../data/aboutData'
 
 function About() {
 
@@ -18,7 +17,7 @@ function About() {
             </div>
             <div className="about-body">
                 <div className="about-description">
-                    <h2 style={{color: theme.primary}}>{aboutData.title}</h2>
+                    <h2 style={{color: theme.primary}}>¿Quien soy?</h2>
                     <p style={{color:theme.tertiary80}}>
                     <b>Mi viaje en el conocimiento:</b> 👨‍🎓
                     <br/><br/>
