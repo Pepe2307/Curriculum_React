@@ -1,7 +1,7 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'UNGS - Universidad de General Sarmiento',
+        institution: 'Universidad de General Sarmiento',
         course: 'Lic en Sistemas',
         startYear: '2019 ',
         endYear: '- Presente'
@@ -15,20 +15,20 @@ export const educationData = [
     {
         id: 3,
         institution: 'Formacion Docente',
-        course: 'Colegio Maximo - Docencia en tecnologias IT',
+        course: 'Colegio Maximo - Docencia en IT',
         startYear: '2021',
     },
 
     {
         id: 4,
         institution: 'Ambos en EducacionIT',
-        course: 'Javascript - Bases de datos con MySql',
+        course: 'Javascript - MySql',
         startYear: '2021',
     },
     {
         id: 5,
         institution: 'EF SET ',
-        course: 'English Certificate - (C2 Proficient) - Maximo Nivel',
+        course: 'English Certificate - C2 Proficient',
         startYear: '2021',
         endYear: ''
     },

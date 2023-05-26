@@ -161,7 +161,6 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        {/* <h6>{headerData.title}</h6> */}
                         <h6 className='skills_landing'>Desarrollador Web</h6>
                         <h6 className='skills_landing'>Programador</h6>
                         <h6 className='skills_landing'>Profesor</h6>

@@ -14,7 +14,8 @@ function Education() {
            
             <div className="education-body">
                 <div className="education-description">
-                <h1 style={{color:theme.primary}}>Educación/Formación</h1>
+                <h1 className="education-title" style={{color:theme.primary}}>Formación</h1>
+                
                     {educationData.map(edu => (
                         <EducationCard 
                             key={edu.id}
