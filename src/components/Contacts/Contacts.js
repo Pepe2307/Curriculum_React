@@ -2,17 +2,8 @@ import './Contacts.css';
 
 import { AiOutlineCheckCircle, AiOutlineSend } from 'react-icons/ai';
 import {
-    FaBloggerB,
-    FaCodepen,
     FaGithub,
-    FaGitlab,
-    FaInstagram,
     FaLinkedinIn,
-    FaMediumM,
-    FaRedditAlien,
-    FaStackOverflow,
-    FaTwitter,
-    FaYoutube,
 } from 'react-icons/fa';
 import { FiAtSign, FiPhone } from 'react-icons/fi';
 import { IconButton, Snackbar, SnackbarContent } from '@material-ui/core';
@@ -25,7 +16,6 @@ import axios from 'axios';
 import { contactsData } from '../../data/contactsData';
 import isEmail from 'validator/lib/isEmail';
 import { makeStyles } from '@material-ui/core/styles';
-import { socialsData } from '../../data/socialsData';
 
 function Contacts() {
     const [open, setOpen] = useState(false);

@@ -16,7 +16,6 @@
 .education-description {
     width: 100%;
     flex: 0.65;
-    /* padding: 2rem; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -97,49 +96,6 @@
 @media (min-width: 992px) and (max-width: 1380px) {
 
 }
-
-
-/* @media screen and (max-width: 800px) {
-    .education-description > h1{
-        font-size: 3rem;
-        margin-bottom: 2rem;
-        align-self: center;
-    }
-    .education-description {
-        padding: 1rem;
-    }
-    .education-card {
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-        height: 130px;
-    }
-    .educard-img {
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-    }
-    
-    .educard-img > img {
-        width: 30px;
-    }
-    .education-details > h6 {
-        font-size: 0.85rem;
-        margin-bottom: 0.45rem;
-    }
-    
-    .education-details > h4 {
-        font-size: 1.125rem;
-        line-height: 126%;
-    }
-    
-    .education-details > h5 {
-        font-size: 1.05rem;
-        line-height: 126%;
-    }
-} */
-
-
-
 a {
     text-decoration: none;
   }
@@ -150,7 +106,6 @@ a {
   }
   
   .row {
-    /* max-width: 900px; */
     width: 25%;
     margin: 50px auto 0;
     align-items: center;

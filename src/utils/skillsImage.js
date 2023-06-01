@@ -1,3 +1,4 @@
+import arduino from '../assets/svg/skills/arduino.svg'
 import bootstrap from '../assets/svg/skills/bootstrap.svg'
 import canva from '../assets/svg/skills/canva.svg'
 import css from '../assets/svg/skills/css.svg'
@@ -14,11 +15,16 @@ import photoshop from '../assets/svg/skills/photoshop.svg'
 import php from '../assets/svg/skills/php.svg'
 import python from '../assets/svg/skills/python.svg'
 import react from '../assets/svg/skills/react.svg'
+import tres_d from '../assets/svg/skills/tres_d.svg'
 import ubuntu from '../assets/svg/skills/ubuntu.svg'
 
 export const skillsImage = (skill) => {
     const skillID = skill.toLowerCase();
     switch (skillID) {
+        case '3d':
+            return tres_d;
+        case 'arduino':
+            return arduino;
         case 'ubuntu':
             return ubuntu;
         case 'node js':

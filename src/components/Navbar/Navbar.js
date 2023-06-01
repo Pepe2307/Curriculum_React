@@ -12,7 +12,6 @@ import { HiDocumentText } from 'react-icons/hi';
 import { MdPhone } from 'react-icons/md';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { headerData } from '../../data/headerData';
 import logo_pepe from '../../assets/svg/logo_centrado_perfecto.svg'
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -140,7 +139,6 @@ function Navbar() {
         
             <div  className='navbar--container'>
                 <h1 style={{ color: theme.secondary }}>
-                    {/* {logo_pepe} */}
                     <img src={logo_pepe} alt="SVG LOGO" className='alineando'
                     style={{ height:"15vh",  width:"15vh" }} />
                 </h1>

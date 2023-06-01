@@ -1,11 +1,8 @@
 import './Landing.css';
 
 import {
-    FaBlogger,
     FaGithub,
     FaLinkedin,
-    FaTwitter,
-    FaYoutube,
 } from 'react-icons/fa';
 import React, { useContext } from 'react';
 
@@ -13,10 +10,8 @@ import { Button } from '@material-ui/core';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import cv from '../../assets/pdf/PabloPaez_Curriculum.pdf'
-import { headerData } from '../../data/headerData';
 import { makeStyles } from '@material-ui/core/styles';
 import profilepic from '../../assets/png/profile.jpg'
-import { socialsData } from '../../data/socialsData';
 
 function Landing() {
     const { theme, drawerOpen } = useContext(ThemeContext);
@@ -103,45 +98,7 @@ function Landing() {
                                 />
                             </a>
                         )}
-                        {/* {socialsData.twitter && (
-                            <a
-                                href={socialsData.twitter}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaTwitter
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Twitter'
-                                />
-                            </a>
-                        )}
-                        {socialsData.youtube && (
-                            <a
-                                href={socialsData.youtube}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaYoutube
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
-                                />
-                            </a>
-                        )} */}
+                        
                     </div>
                 </div>
                 <img

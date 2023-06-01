@@ -1,6 +1,6 @@
 import './App.css'
 
-import { BlogPage, Main, ProjectPage } from './pages'
+import { Main, ProjectPage } from './pages'
 import React, { useContext } from 'react';
 import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
