@@ -30,7 +30,6 @@ export const educationData = [
         institution: 'EF SET ',
         course: 'English Certificate - C2 Proficient',
         startYear: '2021',
-        endYear: ''
     },
     
 ]
