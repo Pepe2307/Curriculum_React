@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <ScrollToTop/>t
+        <ScrollToTop/>
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/projects" exact component={ProjectPage} />
