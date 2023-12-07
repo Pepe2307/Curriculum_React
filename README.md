@@ -1,7 +1,7 @@
 # Pablo Paez 💻
 ## Curriculum Personal - Programador, Desarrollador Web, Profesor
 # 👇¡Live Test!👇
-https://pablo-clima.vercel.app/
+https://pablo-paez-curriculum.vercel.app
 
 ### Contacto📩
 
@@ -13,7 +13,7 @@ Pablo Paez - Desarrollador Web - pablopaez2307@gmail.com
 <br />
 <div align="center">
 
-  <a href="https://github.com/Pepe2307/Clima_React">
+  <a href="https://pablo-paez-curriculum.vercel.app">
     <img src="src/assets/images/desktop.jpg" alt="Logo">
   </a>
 </div>
@@ -42,7 +42,7 @@ Esta pagina web personal es compatible con dispositivos mobile!
 
 <div align="center">
 
-  <a href="https://github.com/Pepe2307/Clima_React">
+  <a href="https://pablo-paez-curriculum.vercel.app">
     <img src="src/assets/images/mobile.jpg" alt="Logo">
   </a>
 </div>
