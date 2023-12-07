@@ -9,20 +9,20 @@ export const educationData = [
     {
         id: 2,
         institution: 'Coderhouse',
-        course: 'Carrera Desarrollo Web FrontEnd',
+        course: 'Carrera Desarrollo Web Fullstack',
         startYear: '2021',
     },
     {
         id: 3,
         institution: 'Formacion Docente',
-        course: 'Colegio Maximo - Docencia en IT',
+        course: 'Prof. en Colegio Maximo y Borges',
         startYear: '2021',
     },
 
     {
         id: 4,
-        institution: 'Ambos en EducacionIT',
-        course: 'Javascript - MySql',
+        institution: 'UTN - EducacionIT',
+        course: 'MySql - PHP - Javascript',
         startYear: '2021',
     },
     {
