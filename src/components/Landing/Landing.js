@@ -118,11 +118,12 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h6 className='skills_landing'>Desarrollador Fullstack</h6>
+                        <h6 className='skills_landing'>Desarrollador Backend</h6>
                         <h6 className='skills_landing'>Programador</h6>
                         <h6 className='skills_landing'>Profesor</h6>
                         <h1>Pablo "Pepe" Paez💻</h1>
-                        <p>Como desarrollador web FULLSTACK, mi experiencia se centra en la creación y mantenimiento de sitios web altamente funcionales y atractivos. Soy experto en habilidades como el manejo de  HTML, CSS, JavaScript, React y el manejo de bases de datos con MySql.</p>
+                        <p>Más de 6 Años de experiencia en el mundo IT. Web developer orientado al Backend con Laravel y PHP, Profesor de Programacion, Robotica y Diseño 3D. Alumno destacado en la carrera de la Lic. en Sistemas
+                        </p>
                         
 
                         <div className='lcr-buttonContainer'>

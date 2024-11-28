@@ -34,7 +34,7 @@ function Education() {
                     <div class="wrapper">
                     <div class="data">
                         <div class="content">
-                        <h1 class="title"><a href="#">Equipo de Profesores IT</a></h1>
+                        <h1 class="title"><a href="#">Exposicion en Taiwan</a></h1>
                         </div>
                     </div>
                     </div>

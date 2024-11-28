@@ -46,14 +46,14 @@
     padding: 2rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content:center;
     margin-top: 2rem;
 }
 
 .projects--viewAll a button {
     outline: none;
     border: none;
-    width: 150px;
+    width: 250px;
     height: 90px;
     display: flex;
     align-items: center;
