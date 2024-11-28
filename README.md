@@ -14,7 +14,7 @@ Pablo Paez - Desarrollador Web - pablopaez2307@gmail.com
 <div align="center">
 
   <a href="https://pablo-paez-curriculum.vercel.app">
-    <img src="src/assets/images/desktop.jpg" alt="Logo">
+    <img src="src/assets/images/desktop.png" alt="Logo">
   </a>
 </div>
 
@@ -43,7 +43,7 @@ Esta pagina web personal es compatible con dispositivos mobile!
 <div align="center">
 
   <a href="https://pablo-paez-curriculum.vercel.app">
-    <img src="src/assets/images/mobile.jpg" alt="Logo">
+    <img src="src/assets/images/mobile.png" alt="Logo">
   </a>
 </div>
 
