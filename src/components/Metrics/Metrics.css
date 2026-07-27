@@ -1,0 +1,52 @@
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    width: 90%;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+}
+
+.metric--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 1.6rem 0.9rem;
+    transition: transform 300ms ease-in-out;
+}
+
+.metric--card:hover {
+    transform: translateY(-6px);
+}
+
+.metric--value {
+    font-family: var(--primaryFont);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.metric--label {
+    font-family: var(--primaryFont);
+    font-size: 0.88rem;
+    line-height: 135%;
+    margin-top: 0.6rem;
+}
+
+@media screen and (max-width: 992px) {
+    .metrics {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .metrics {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    .metric--value {
+        font-size: 2rem;
+    }
+}

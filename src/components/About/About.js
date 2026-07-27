@@ -2,12 +2,17 @@ import './About.css';
 
 import React, { useContext } from 'react';
 
-import {Blog} from '../../components'
+import AboutTerminal from '../AboutTerminal/AboutTerminal';
+import { LanguageContext } from '../../contexts/LanguageContext';
 import { ThemeContext } from '../../contexts/ThemeContext';
+import { ui } from '../../data/translations';
 
 function About() {
 
     const { theme } = useContext(ThemeContext);
+    const { lang } = useContext(LanguageContext);
+    const tr = ui[lang];
+
     return (
         <div className="about" id="about" style={{backgroundColor: theme.secondary}}>
             <div className="line-styling">
@@ -17,25 +22,9 @@ function About() {
             </div>
             <div className="about-body">
                 <div className="about-description">
-                    <h2 style={{color: theme.primary}}>¿Quien soy?</h2>
-                    <p style={{color:theme.tertiary80}}>
-                    <b>Mi viaje en el conocimiento:</b> 👨‍🎓
-                    <br/><br/>
-                    Pablo/Pepe, soy un <b>Estudiante avanzado de la Lic. en Sistemas</b> en la Universidad de General Sarmiento, donde aprendí los fundamentos de la programacion.
-                    <br/>
-                    <br/>
-                    Luego encontré el <b>Desarrollo Web Backend</b> y me concentre en aprenderlo y especializarme en el.
-                    <br/>
-                    <br/>
-                    
-                    Fui becado para <b>Estudiar en Taiwán</b> en la Taiwan Ming Chi University of Technology
-
-                    
-                    </p>
+                    <h2 style={{color: theme.primary}}>{tr.aboutTitle}</h2>
+                    <AboutTerminal />
                 </div>
-
-                
-                <Blog />
             </div>
         </div>
 

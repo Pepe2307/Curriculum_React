@@ -1,0 +1,142 @@
+.contactMap {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.contactMap--canvas {
+    width: 100%;
+    height: 100%;
+    background: #161616;
+}
+
+/* ---- capa de cielo (nubes + avion) ---- */
+.contactMap--sky {
+    position: absolute;
+    inset: 0;
+    z-index: 400;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.contactMap--cloud {
+    position: absolute;
+    color: #ffffff;
+    opacity: 0.14;
+    filter: blur(1px);
+    will-change: transform;
+}
+
+.contactMap--cloud1 {
+    top: 18%;
+    font-size: 3rem;
+    animation: mapCloud 34s linear infinite;
+}
+
+.contactMap--cloud2 {
+    top: 38%;
+    font-size: 4.5rem;
+    opacity: 0.1;
+    animation: mapCloud 52s linear infinite;
+    animation-delay: -12s;
+}
+
+.contactMap--cloud3 {
+    top: 8%;
+    font-size: 2.2rem;
+    animation: mapCloud 26s linear infinite;
+    animation-delay: -6s;
+}
+
+@keyframes mapCloud {
+    from { transform: translateX(-25%); }
+    to { transform: translateX(calc(100vw)); }
+}
+
+.contactMap--plane {
+    position: absolute;
+    top: 68%;
+    left: -8%;
+    font-size: 1.6rem;
+    color: #ffffff;
+    opacity: 0.55;
+    transform: rotate(-18deg);
+    animation: mapPlane 16s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+@keyframes mapPlane {
+    0% { transform: translate(0, 0) rotate(-18deg); opacity: 0; }
+    12% { opacity: 0.6; }
+    88% { opacity: 0.6; }
+    100% { transform: translate(115%, -46%) rotate(-18deg); opacity: 0; }
+}
+
+/* ---- reloj de hora local ---- */
+.contactMap--clock {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 401;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.85rem;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    font-family: var(--primaryFont);
+}
+
+.contactMap--time {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.contactMap--tz {
+    font-size: 0.68rem;
+    opacity: 0.75;
+    margin-top: 0.1rem;
+}
+
+.contactMap .maplibregl-canvas {
+    outline: none;
+}
+
+/* popup en tono oscuro para combinar con los tiles */
+.contactMap .maplibregl-popup-content {
+    background: #212121;
+    color: #eaeaea;
+    font-family: var(--primaryFont);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+}
+
+.contactMap .maplibregl-popup-anchor-top .maplibregl-popup-tip,
+.contactMap .maplibregl-popup-anchor-top-left .maplibregl-popup-tip,
+.contactMap .maplibregl-popup-anchor-top-right .maplibregl-popup-tip {
+    border-bottom-color: #212121;
+}
+
+.contactMap .maplibregl-popup-anchor-bottom .maplibregl-popup-tip,
+.contactMap .maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip,
+.contactMap .maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip {
+    border-top-color: #212121;
+}
+
+.contactMap .maplibregl-popup-close-button {
+    color: #eaeaea;
+    font-size: 1.1rem;
+    padding-right: 0.3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .contactMap {
+        height: 280px;
+    }
+}

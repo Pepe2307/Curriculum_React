@@ -1,6 +1,6 @@
 import './Navbar.css';
 
-import { FaFolderOpen, FaUser } from 'react-icons/fa';
+import { FaBriefcase, FaFolderOpen, FaLanguage, FaUser } from 'react-icons/fa';
 import { IoHomeSharp, IoMenuSharp } from 'react-icons/io5';
 import React, { useContext, useState } from 'react';
 
@@ -9,14 +9,20 @@ import CloseIcon from '@material-ui/icons/Close';
 import Drawer from '@material-ui/core/Drawer';
 import Fade from 'react-reveal/Fade';
 import { HiDocumentText } from 'react-icons/hi';
+import { LanguageContext } from '../../contexts/LanguageContext';
+import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
+import LatencyPill from '../LatencyPill/LatencyPill';
 import { MdPhone } from 'react-icons/md';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import logo_pepe from '../../assets/svg/logo_centrado_perfecto.svg'
 import { makeStyles } from '@material-ui/core/styles';
+import { ui } from '../../data/translations';
 
 function Navbar() {
     const { theme, setHandleDrawer } = useContext(ThemeContext);
+    const { lang } = useContext(LanguageContext);
+    const tr = ui[lang];
 
     const [open, setOpen] = useState(false);
 
@@ -32,22 +38,20 @@ function Navbar() {
 
     const useStyles = makeStyles((t) => ({
         navMenu: {
-            fontSize: '2.5rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '38px',
+            width: '38px',
+            fontSize: '2rem',
             color: theme.tertiary,
             cursor: 'pointer',
-            transform: 'translateY(-10px)',
             transition: 'color 0.3s',
-            position: "fixed",
-            top:"30px",
-            right: "30px",
             '&:hover': {
                 color: theme.primary,
             },
-            [t.breakpoints.down('sm')]: {
-                fontSize: '2.5rem',
-            },
             [t.breakpoints.down('xs')]: {
-                fontSize: '2rem',
+                fontSize: '1.8rem',
             },
         },
         MuiDrawer: {
@@ -143,12 +147,16 @@ function Navbar() {
                     style={{ height:"15vh",  width:"15vh" }} />
                 </h1>
 
-                <IoMenuSharp
-                    className={classes.navMenu}
-                    onClick={handleDrawerOpen}
-                    aria-label='Menu'
-                    id='navicon'
-                />
+                <div className='topControls'>
+                    <LatencyPill />
+                    <LanguageSwitch />
+                    <IoMenuSharp
+                        className={classes.navMenu}
+                        onClick={handleDrawerOpen}
+                        aria-label='Menu'
+                        id='navicon'
+                    />
+                </div>
             </div>
             <Drawer
                 variant='temporary'
@@ -196,7 +204,7 @@ function Navbar() {
                                         className={classes.drawerIcon}
                                     />
                                     <span className={classes.drawerLinks}>
-                                        Home
+                                        {tr.navHome}
                                     </span>
                                 </div>
                             </NavLink>
@@ -212,7 +220,25 @@ function Navbar() {
                                 <div className={classes.drawerItem}>
                                     <FaUser className={classes.drawerIcon} />
                                     <span className={classes.drawerLinks}>
-                                        Sobre mi
+                                        {tr.navAbout}
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        <Fade left>
+                            <NavLink
+                                to='/#experience'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <FaBriefcase
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        {tr.navExperience}
                                     </span>
                                 </div>
                             </NavLink>
@@ -230,7 +256,7 @@ function Navbar() {
                                         className={classes.drawerIcon}
                                     />
                                     <span className={classes.drawerLinks}>
-                                        TechStack
+                                        {tr.navSkills}
                                     </span>
                                 </div>
                             </NavLink>
@@ -248,7 +274,25 @@ function Navbar() {
                                         className={classes.drawerIcon}
                                     />
                                     <span className={classes.drawerLinks}>
-                                        Educacion
+                                        {tr.navEducation}
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        <Fade left>
+                            <NavLink
+                                to='/#languages'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <FaLanguage
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        {tr.navLanguages}
                                     </span>
                                 </div>
                             </NavLink>
@@ -266,7 +310,7 @@ function Navbar() {
                                         className={classes.drawerIcon}
                                     />
                                     <span className={classes.drawerLinks}>
-                                        Proyectos
+                                        {tr.navProjects}
                                     </span>
                                 </div>
                             </NavLink>
@@ -283,7 +327,7 @@ function Navbar() {
                                 <div className={classes.drawerItem}>
                                     <MdPhone className={classes.drawerIcon} />
                                     <span className={classes.drawerLinks}>
-                                        Contacto
+                                        {tr.navContact}
                                     </span>
                                 </div>
                             </NavLink>

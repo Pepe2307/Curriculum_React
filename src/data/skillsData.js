@@ -1,17 +1,15 @@
- export const skillsData = [
-    'HTML',
-    'CSS',
-    'Tailwind',
-    'Javascript',
-    'Bootstrap',
-    'React',
-    'MySQL',
+// Orden pensado para que el stack backend se lea primero en el marquee.
+export const skillsData = [
     'PHP',
     'Laravel',
+    'MySQL',
+    'Docker',
+    'AWS',
     'Linux',
-    'API',
-    'Git',
     'Node JS',
-    '3D',
-    'Arduino'
+    'Git',
+    'Javascript',
+    'React',
+    'Vue JS',
+    'Tailwind'
 ]

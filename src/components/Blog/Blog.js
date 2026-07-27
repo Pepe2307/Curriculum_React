@@ -3,15 +3,19 @@ import './Blog.css';
 import React,{ useContext } from 'react';
 
 import { HiArrowRight } from "react-icons/hi";
+import { LanguageContext } from '../../contexts/LanguageContext';
 import { Link } from 'react-router-dom'
 import SingleBlog from './SingleBlog/SingleBlog';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { blogData } from '../../data/blogData'
+import { ui } from '../../data/translations'
 import { makeStyles } from '@material-ui/core/styles';
 
 function Blog() {
 
     const { theme } = useContext(ThemeContext);
+    const { lang, pick } = useContext(LanguageContext);
+    const tr = ui[lang];
 
     const useStyles = makeStyles(() => ({
         viewAllBtn : {
@@ -45,15 +49,15 @@ function Blog() {
             {blogData.length > 0 && (
                 <div className="blog" id="blog" style={{backgroundColor: theme.secondary}}>
                     <div className="blog--header">
-                        <h1 style={{color: theme.primary}}>Staff UTEC</h1>
+                        <h1 style={{color: theme.primary}}>{tr.blogTitle}</h1>
                     </div>
                     <div className="blog--body">
                         <div className="blog--bodyContainer">
                             {blogData.slice(0, 3).reverse().map(blog => (
                                 <SingleBlog 
                                     theme={theme}
-                                    title={blog.title}
-                                    desc={blog.description}
+                                    title={pick(blog.title)}
+                                    desc={pick(blog.description)}
                                     date={blog.date}
                                     image={blog.image}
                                     url={blog.url}
@@ -67,7 +71,7 @@ function Blog() {
                             <div className="blog--viewAll">
                                 <Link to="/blog">
                                     <button className={classes.viewAllBtn}>
-                                        View All
+                                        {tr.blogViewAll}
                                         <HiArrowRight className={classes.viewArr} />
                                     </button>
                                 </Link>

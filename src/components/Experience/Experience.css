@@ -1,0 +1,169 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 2.5rem 2rem 4rem 2rem;
+    overflow-x: hidden;
+}
+
+.experience--header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem;
+}
+
+.experience--header h1 {
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: var(--primaryFont);
+}
+
+.experience--timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 3rem;
+}
+
+/* riel vertical que une los hitos */
+.experience--line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 4px;
+    border-radius: 2px;
+}
+
+.experience--item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.experience--dot {
+    position: absolute;
+    left: -3rem;
+    top: 28px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translateX(2px);
+}
+
+.experience--card {
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    transition: transform 300ms ease-in-out;
+}
+
+.experience--card:hover {
+    transform: translateY(-6px);
+}
+
+.experience--period {
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.experience--card h2 {
+    font-family: var(--primaryFont);
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 120%;
+    margin-top: 0.4rem;
+}
+
+.experience--card h3 {
+    font-family: var(--primaryFont);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 130%;
+    margin-top: 0.3rem;
+}
+
+.experience--summary {
+    font-family: var(--primaryFont);
+    font-size: 1.05rem;
+    line-height: 140%;
+    margin-top: 0.8rem;
+    font-style: italic;
+}
+
+.experience--highlights {
+    margin: 1rem 0 0 1.1rem;
+    padding: 0;
+}
+
+.experience--highlights li {
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    line-height: 150%;
+    margin-bottom: 0.6rem;
+}
+
+.experience--stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+}
+
+.experience--stack span {
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .experience {
+        padding: 1rem 1rem 3rem 1rem;
+    }
+    .experience--header h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    .experience--timeline {
+        padding-left: 2rem;
+    }
+    .experience--line {
+        left: 6px;
+    }
+    .experience--dot {
+        left: -2rem;
+        width: 16px;
+        height: 16px;
+        top: 24px;
+    }
+    .experience--card {
+        padding: 1.4rem 1.3rem;
+    }
+    .experience--card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .experience--header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .experience--card h2 {
+        font-size: 1.25rem;
+    }
+    .experience--card h3 {
+        font-size: 1rem;
+    }
+    .experience--highlights li,
+    .experience--summary {
+        font-size: 0.95rem;
+    }
+}

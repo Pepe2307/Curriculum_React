@@ -1,0 +1,324 @@
+.sketches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 5rem 2rem;
+    overflow-x: hidden;
+}
+
+.sketches--header {
+    text-align: center;
+    max-width: 720px;
+    margin-bottom: 3rem;
+}
+
+.sketches--header h1 {
+    font-family: var(--primaryFont);
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+}
+
+.sketches--header p {
+    font-family: var(--primaryFont);
+    font-size: 1.05rem;
+    line-height: 150%;
+}
+
+.sketch {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 4rem;
+}
+
+.sketch--label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sketch--number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-family: var(--primaryFont);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.sketch--label h3 {
+    font-family: var(--primaryFont);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.sketch--label p {
+    font-family: var(--primaryFont);
+    font-size: 0.98rem;
+    line-height: 145%;
+    margin-top: 0.3rem;
+}
+
+/* ---------- boceto 1: metricas ---------- */
+
+.sketch--statsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.sketch--statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 1.6rem 0.9rem;
+}
+
+.sketch--statValue {
+    font-family: var(--primaryFont);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.sketch--statLabel {
+    font-family: var(--primaryFont);
+    font-size: 0.88rem;
+    line-height: 135%;
+    margin-top: 0.6rem;
+}
+
+/* ---------- boceto 2: terminal ---------- */
+
+.sketch--terminal {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.sketch--terminalBar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+}
+
+.sketch--dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.sketch--terminalTitle {
+    margin-left: 0.8rem;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #8a8a8a;
+}
+
+.sketch--terminalBody {
+    height: 320px;
+    overflow-y: auto;
+    padding: 1rem 1.2rem;
+    cursor: text;
+}
+
+.sketch--terminalLine {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.92rem;
+    line-height: 160%;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.sketch--terminalForm {
+    display: flex;
+    align-items: center;
+}
+
+.sketch--terminalForm label {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.92rem;
+}
+
+.sketch--terminalInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.92rem;
+    padding: 0;
+}
+
+/* ---------- boceto 3: filtro ---------- */
+
+.sketch--chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sketch--chip {
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.sketch--filterCount {
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.sketch--filterGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.sketch--filterCard {
+    border-radius: 10px;
+    padding: 1.2rem 1.3rem;
+}
+
+.sketch--filterCard h4 {
+    font-family: var(--primaryFont);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.sketch--filterTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+}
+
+.sketch--filterTags span {
+    font-family: var(--primaryFont);
+    font-size: 0.78rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+}
+
+/* ---------- boceto 4: diagrama de arquitectura ---------- */
+
+.sketch--arch {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.sketch--archLayer {
+    border-radius: 10px;
+    padding: 1.1rem 1.4rem;
+}
+
+.sketch--archLayerTitle {
+    display: block;
+    font-family: var(--primaryFont);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sketch--archNodes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.sketch--archNode {
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+}
+
+/* conector vertical entre capas */
+.sketch--archArrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.35rem 0;
+}
+
+.sketch--archArrow span {
+    display: block;
+    width: 3px;
+    height: 16px;
+    border-radius: 2px;
+}
+
+.sketch--archNote {
+    font-family: var(--primaryFont);
+    font-size: 0.92rem;
+    line-height: 150%;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+/* ---------- boceto 8: campo vectorial ---------- */
+
+.sketch--vectorStage {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ---------- responsive ---------- */
+
+@media screen and (max-width: 992px) {
+    .sketch--statsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sketches {
+        padding: 2rem 1rem 3rem 1rem;
+    }
+    .sketches--header h1 {
+        font-size: 2.4rem;
+    }
+    .sketch--filterGrid {
+        grid-template-columns: 1fr;
+    }
+    .sketch--archNode {
+        font-size: 0.82rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sketch--statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sketch--statValue {
+        font-size: 2rem;
+    }
+    .sketch--label h3 {
+        font-size: 1.3rem;
+    }
+    .sketch--terminalBody {
+        height: 260px;
+    }
+}

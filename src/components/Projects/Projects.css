@@ -31,14 +31,19 @@
     justify-content: center;
 }
 
-.projects--bodyContainer {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    justify-content: center;
-    grid-gap: 2.5rem;
-    width: 90%;
-    margin: auto;
+.projects--scroll {
+    width: 100%;
+    margin: 0 2rem;
+}
+
+.project--box {
+    margin: 1.5rem;
+}
+
+/* dentro del marquee las tarjetas son flex items: el margin:auto original
+   las descentraria, y overflow visible rompe el recorte de la fila */
+.projects--scroll .singleProject {
+    margin: 0;
 }
 
 .projects--viewAll {
@@ -75,12 +80,14 @@
 
 
 @media screen and (max-width: 1200px) {
-    .projects--bodyContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+    .project--box {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .projects--scroll {
+        margin: 0;
     }
 }
 

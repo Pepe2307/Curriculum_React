@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
+function SingleProject({ id, name, desc, tags, code, demo, image, theme, animate = true }) {
     const useStyles = makeStyles((t) => ({
         iconBtn: {
             display: 'flex',
@@ -34,8 +34,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
 
     const classes = useStyles();
 
-    return (
-        <Fade bottom>
+    const card = (
             <div
                 key={id}
                 className='singleProject'
@@ -49,45 +48,51 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                         {name}
                     </h2>
                     <img src={image ? image : null} alt={name} />
+                    {/* los sistemas privados no tienen demo ni repo publico:
+                        sin URL no se renderiza el enlace */}
                     <div className='project--showcaseBtn'>
-                        <a
-                            href={demo}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.iconBtn}
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-demo`}
-                        >
-                            <FaPlay
-                                id={`${name
+                        {demo && (
+                            <a
+                                href={demo}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.iconBtn}
+                                aria-labelledby={`${name
+                                    .replace(' ', '-')
+                                    .toLowerCase()} ${name
                                     .replace(' ', '-')
                                     .toLowerCase()}-demo`}
-                                className={classes.icon}
-                                aria-label='Demo'
-                            />
-                        </a>
-                        <a
-                            href={code}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.iconBtn}
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-code`}
-                        >
-                            <FaCode
-                                id={`${name
+                            >
+                                <FaPlay
+                                    id={`${name
+                                        .replace(' ', '-')
+                                        .toLowerCase()}-demo`}
+                                    className={classes.icon}
+                                    aria-label='Demo'
+                                />
+                            </a>
+                        )}
+                        {code && (
+                            <a
+                                href={code}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.iconBtn}
+                                aria-labelledby={`${name
+                                    .replace(' ', '-')
+                                    .toLowerCase()} ${name
                                     .replace(' ', '-')
                                     .toLowerCase()}-code`}
-                                className={classes.icon}
-                                aria-label='Code'
-                            />
-                        </a>
+                            >
+                                <FaCode
+                                    id={`${name
+                                        .replace(' ', '-')
+                                        .toLowerCase()}-code`}
+                                    className={classes.icon}
+                                    aria-label='Code'
+                                />
+                            </a>
+                        )}
                     </div>
                 </div>
                 <p
@@ -111,8 +116,11 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     ))}
                 </div>
             </div>
-        </Fade>
     );
+
+    // Dentro del marquee las tarjetas se desplazan sin disparar eventos de
+    // scroll, por lo que el reveal de react-reveal las dejaria invisibles.
+    return animate ? <Fade bottom>{card}</Fade> : card;
 }
 
 export default SingleProject;

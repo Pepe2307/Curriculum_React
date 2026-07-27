@@ -1,0 +1,47 @@
+.latencyPill {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 0.45rem;
+    height: 38px;
+    padding: 0 0.95rem;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: transform 200ms ease, opacity 0.3s;
+}
+
+.latencyPill:hover {
+    transform: translateY(-1px);
+}
+
+.latencyPill--dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.latencyPill--dot.is-live {
+    animation: latencyPulse 1s ease-in-out infinite;
+}
+
+@keyframes latencyPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.72); }
+}
+
+.latencyPill--label {
+    line-height: 1;
+}
+
+/* en pantallas chicas el tope se llena (logo + ES/EN + menu): se oculta */
+@media screen and (max-width: 768px) {
+    .latencyPill {
+        display: none;
+    }
+}

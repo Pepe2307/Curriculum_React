@@ -1,22 +1,30 @@
-import { About, Contacts, Education, Landing, Navbar, Projects, Skills } from '../../components'
+import { About, Contacts, Education, Experience, Landing, Languages, Navbar, Projects, Sketches, Skills } from '../../components'
+import React, { useContext } from 'react'
 
 import { Helmet } from 'react-helmet'
-import React from 'react'
+import { LanguageContext } from '../../contexts/LanguageContext'
+import { ui } from '../../data/translations'
 
 function Main() {
+
+    const { lang } = useContext(LanguageContext)
+
     return (
         <div>
             <Helmet>
-                <title>Pablo Paez - Porfolio</title>
+                <title>{ui[lang].pageTitle}</title>
             </Helmet>
 
-            <Navbar />        
+            <Navbar />
             <Landing />
-            <About />
-            <Skills />
-            <Education />            
             <Projects />
+            <Skills />
+            <Experience />
+            <Education />
+            <About />
+            <Languages />
             <Contacts />
+            <Sketches />
         </div>
     )
 }

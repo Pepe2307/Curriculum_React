@@ -137,6 +137,14 @@
     margin-top: 1.2rem;
 }
 
+.contacts-map {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+}
+
 
 
 .personal-details {
@@ -156,6 +164,38 @@
     font-family: var(--primaryFont);
     width: 45%;
     word-break: break-word;
+}
+
+/* filas de github/linkedin: se resaltan como links clickeables */
+.contacts-link {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contacts-link:hover {
+    transform: translateX(4px);
+}
+
+.contacts-link-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: opacity 0.2s ease;
+}
+
+.contacts-link-text span {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+.contacts-link-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.contacts-link:hover .contacts-link-text {
+    opacity: 0.72;
 }
 
 .socialmedia-icons {
@@ -240,6 +280,12 @@
         padding: 1rem;
         align-items: center;
         margin-top: 2rem;
+    }
+    .contacts-map {
+        width: 90%;
+        flex: initial;
+        padding-left: 0;
+        margin-top: 1.5rem;
     }
     .socialmedia-icons {
         width: 100%;

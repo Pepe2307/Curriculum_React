@@ -1,0 +1,113 @@
+.languages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 50vh;
+    padding: 2.5rem 2rem 4rem 2rem;
+    overflow-x: hidden;
+}
+
+.languages--header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem;
+}
+
+.languages--header h1 {
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    font-family: var(--primaryFont);
+}
+
+.languages--container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.language--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 1.8rem 1.2rem;
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+}
+
+.language--card:hover {
+    transform: translateY(-8px);
+}
+
+.language--badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 66px;
+    padding: 0.45rem 1rem;
+    border-radius: 20px;
+    font-family: var(--primaryFont);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.language--card h2 {
+    font-family: var(--primaryFont);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.1rem;
+}
+
+.language--descriptor {
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    margin-top: 0.35rem;
+}
+
+.language--source {
+    font-family: var(--primaryFont);
+    font-size: 0.82rem;
+    line-height: 130%;
+    margin-top: 0.8rem;
+}
+
+@media screen and (max-width: 992px) {
+    .languages--container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 620px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .languages {
+        padding: 1rem 1rem 3rem 1rem;
+    }
+    .languages--header h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .languages--header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .languages--container {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+    .language--card {
+        padding: 1.4rem 1rem;
+    }
+    .language--card h2 {
+        font-size: 1.3rem;
+    }
+}

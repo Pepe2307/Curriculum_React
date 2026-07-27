@@ -4,18 +4,23 @@ import { AiOutlineCheckCircle, AiOutlineSend } from 'react-icons/ai';
 import {
     FaGithub,
     FaLinkedinIn,
+    FaWhatsapp,
 } from 'react-icons/fa';
-import { FiAtSign, FiPhone } from 'react-icons/fi';
+import { FiAtSign, FiExternalLink, FiPhone } from 'react-icons/fi';
 import { IconButton, Snackbar, SnackbarContent } from '@material-ui/core';
 import React, { useContext, useState } from 'react';
 
 import CloseIcon from '@material-ui/icons/Close';
+import ContactMap from '../ContactMap/ContactMap';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { LanguageContext } from '../../contexts/LanguageContext';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import axios from 'axios';
 import { contactsData } from '../../data/contactsData';
 import isEmail from 'validator/lib/isEmail';
 import { makeStyles } from '@material-ui/core/styles';
+import { ui } from '../../data/translations';
+import { waLink } from '../../data/whatsappData';
 
 function Contacts() {
     const [open, setOpen] = useState(false);
@@ -28,6 +33,8 @@ function Contacts() {
     const [errMsg, setErrMsg] = useState('');
 
     const { theme } = useContext(ThemeContext);
+    const { lang } = useContext(LanguageContext);
+    const tr = ui[lang];
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -157,29 +164,31 @@ function Contacts() {
             style={{ backgroundColor: theme.secondary }}
         >
             <div className='contacts--container'>
-                <h1 style={{ color: theme.primary }}>Contacto</h1>
+                <h1 style={{ color: theme.primary }}>{tr.contactTitle}</h1>
                 <div className='contacts-body'>
                     
         
                     <div className='contacts-details'>
-                        <a
-                            className='personal-details'
-                        >
+                        <div className='personal-details'>
                             <div className={classes.detailsIcon}>
                                 <FiAtSign />
                             </div>
                             <p style={{ color: theme.tertiary }}>
-                                pablopaez2307@gmail.com
+                                {contactsData.email}
                             </p>
-                        </a>
+                        </div>
                         <a
-                            className='personal-details'
+                            className='personal-details contacts-link'
+                            href={waLink(lang)}
+                            target='_blank'
+                            rel='noreferrer'
                         >
                             <div className={classes.detailsIcon}>
                                 <FiPhone />
                             </div>
-                            <p style={{ color: theme.tertiary }}>
-                                11 68654369
+                            <p className='contacts-link-text' style={{ color: theme.primary }}>
+                                <span>{contactsData.phone}</span>
+                                <FaWhatsapp className='contacts-link-icon' />
                             </p>
                         </a>
                         <div className='personal-details'>
@@ -187,31 +196,43 @@ function Contacts() {
                                 <HiOutlineLocationMarker />
                             </div>
                             <p style={{ color: theme.tertiary }}>
-                                Argentina - Buenos Aires - San Miguel
+                                {contactsData.address}
                             </p>
                         </div>
 
-                        <div className='socialmedia-icons'>
-                        
-                                <a
-                                    href={"https://github.com/Pepe2307"}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaGithub aria-label='GitHub' />
-                                </a>
-                            
-                                <a
-                                    href={"https://www.linkedin.com/in/pablo-paez-t/"}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaLinkedinIn aria-label='LinkedIn' />
-                                </a>
-                            
-                        </div>
+                        <a
+                            className='personal-details contacts-link'
+                            href='https://github.com/Pepe2307'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <div className={classes.detailsIcon}>
+                                <FaGithub />
+                            </div>
+                            <p className='contacts-link-text' style={{ color: theme.primary }}>
+                                <span>github.com/Pepe2307</span>
+                                <FiExternalLink className='contacts-link-icon' />
+                            </p>
+                        </a>
+
+                        <a
+                            className='personal-details contacts-link'
+                            href='https://www.linkedin.com/in/pablo-paez-t/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <div className={classes.detailsIcon}>
+                                <FaLinkedinIn />
+                            </div>
+                            <p className='contacts-link-text' style={{ color: theme.primary }}>
+                                <span>linkedin.com/in/pablo-paez-t</span>
+                                <FiExternalLink className='contacts-link-icon' />
+                            </p>
+                        </a>
+                    </div>
+
+                    <div className='contacts-map'>
+                        <ContactMap />
                     </div>
                 </div>
             </div>

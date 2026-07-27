@@ -2,6 +2,51 @@
 
 .education {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 4rem;
+    box-sizing: border-box;
+}
+
+.education-title {
+    font-size: 3.5rem;
+    font-family: var(--primaryFont);
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+/* dos columnas: izquierda developer, derecha foto + universidad/docencia/tecnico */
+.education-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1150px;
+    align-items: start;
+}
+
+.education-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 0;
+}
+
+.education-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.education-photo > img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
 }
 
 .education-body {
@@ -27,6 +72,45 @@
     font-size: 3.5rem;
     font-family: var(--primaryFont);
     margin-bottom: 2rem;
+}
+
+/* grupos por categoria (developer / docencia / tecnico) */
+.education-group {
+    width: 100%;
+    margin-bottom: 2.2rem;
+}
+
+.education-catTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--primaryFont);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.1rem;
+}
+
+.education-catCount {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 0.15rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* dentro de la grilla las cards llenan la celda y crecen segun contenido */
+.education-grid .education-card {
+    width: 100%;
+    height: auto;
+    min-height: 118px;
+    margin-bottom: 0;
 }
 
 .education-card {
@@ -263,16 +347,38 @@ a {
 
 
 
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 992px) {
     .row{
         display: none;
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
+    /* las dos columnas se apilan; la foto queda arriba de todo */
+    .education-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 560px;
+    }
+    .education-title {
+        font-size: 3rem;
+        margin-bottom: 1.8rem;
+    }
     .education-card {
-    width: 100%;
-    height: 170px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .education {
+        padding: 2rem 1rem 3rem;
+    }
+    .education-title {
+        font-size: 2.5rem;
+    }
+    .education-photo > img {
+        max-width: 220px;
     }
 }
 @media screen and (max-width: 650px) {

@@ -2,14 +2,18 @@ import './Skills.css'
 
 import React,{ useContext } from 'react';
 
+import { LanguageContext } from '../../contexts/LanguageContext';
 import Marquee from "react-fast-marquee";
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { skillsData } from '../../data/skillsData'
 import { skillsImage } from '../../utils/skillsImage'
+import { ui } from '../../data/translations'
 
 function Skills() {
 
     const { theme } = useContext(ThemeContext);
+    const { lang } = useContext(LanguageContext);
+    const tr = ui[lang];
 
     const skillBoxStyle = {
         backgroundColor: theme.secondary,
@@ -19,7 +23,7 @@ function Skills() {
     return (
         <div id ="skills"className="skills" style={{backgroundColor: theme.secondary}}>
             <div className="skillsHeader">
-                <h2 style={{color: theme.primary}}>Mis Habilidades</h2>
+                <h2 style={{color: theme.primary}}>{tr.skillsTitle}</h2>
             </div>
             <div className="skillsContainer">
                 <div className="skill--scroll">

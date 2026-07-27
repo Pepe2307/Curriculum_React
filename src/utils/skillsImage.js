@@ -1,24 +1,30 @@
 import api from '../assets/svg/skills/api.svg'
 import arduino from '../assets/svg/skills/arduino.svg'
+import aws from '../assets/svg/skills/aws.svg'
 import bootstrap from '../assets/svg/skills/bootstrap.svg'
 import canva from '../assets/svg/skills/canva.svg'
 import css from '../assets/svg/skills/css.svg'
+import docker from '../assets/svg/skills/docker.svg'
 import firebase from '../assets/svg/skills/firebase.svg'
 import git from '../assets/svg/skills/git.svg'
 import html from '../assets/svg/skills/html.svg'
 import java from '../assets/svg/skills/java.svg'
 import javascript from '../assets/svg/skills/javascript.svg'
 import laravel from '../assets/svg/skills/laravel.svg'
+import livewire from '../assets/svg/skills/livewire.svg'
 import microsoftoffice from '../assets/svg/skills/microsoftoffice.svg'
 import mysql from '../assets/svg/skills/mysql.svg'
 import nextJS from '../assets/svg/skills/nextJS.svg'
 import nodejs from '../assets/svg/skills/nodejs.svg'
 import php from '../assets/svg/skills/php.svg'
+import postman from '../assets/svg/skills/postman.svg'
 import python from '../assets/svg/skills/python.svg'
 import react from '../assets/svg/skills/react.svg'
+import sass from '../assets/svg/skills/sass.svg'
 import tailwind from '../assets/svg/skills/tailwind.svg'
 import tres_d from '../assets/svg/skills/tres_d.svg'
 import ubuntu from '../assets/svg/skills/ubuntu.svg'
+import vue from '../assets/svg/skills/vue.svg'
 
 export const skillsImage = (skill) => {
     const skillID = skill.toLowerCase();
@@ -65,6 +71,18 @@ export const skillsImage = (skill) => {
             return tailwind;
         case 'laravel':
             return laravel;
+        case 'livewire':
+            return livewire;
+        case 'vue js':
+            return vue;
+        case 'docker':
+            return docker;
+        case 'aws':
+            return aws;
+        case 'sass':
+            return sass;
+        case 'postman':
+            return postman;
         default:
             break;
     }

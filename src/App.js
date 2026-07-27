@@ -4,7 +4,7 @@ import { Main, ProjectPage } from './pages'
 import React, { useContext } from 'react';
 import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import { BackToTop } from './components'
+import { BackToTop, WhatsAppButton } from './components'
 import ScrollToTop from './utils/ScrollToTop'
 import { ThemeContext } from './contexts/ThemeContext';
 
@@ -26,7 +26,11 @@ function App() {
           <Redirect to="/" />
         </Switch>
       </Router>
-      <BackToTop />
+      {/* botones flotantes apilados y centrados sobre el mismo eje vertical */}
+      <div className="floatButtons">
+        <BackToTop />
+        <WhatsAppButton />
+      </div>
     </div>
   );
 }

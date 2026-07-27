@@ -1,0 +1,237 @@
+.aboutTerm {
+    width: 100%;
+    max-width: 920px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #161616;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+}
+
+.aboutTerm--bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    background: #2a2a2a;
+}
+
+.aboutTerm--dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.aboutTerm--barTitle {
+    margin-left: 0.8rem;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #8a8a8a;
+}
+
+.aboutTerm--body {
+    padding: 1.2rem 1.4rem 1.5rem;
+    min-height: 360px;
+}
+
+.aboutTerm--line {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 1.12rem;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.aboutTerm--hl {
+    font-weight: 600;
+}
+
+/* revelado tipo "tipeo": cada linea aparece cuando el bloque entra en vista */
+.aboutTerm--body .aboutTerm--line {
+    opacity: 0;
+}
+
+.aboutTerm--body.is-live .aboutTerm--line {
+    animation: aboutTermLine 0.35s ease forwards;
+}
+
+@keyframes aboutTermLine {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* cursor parpadeante al final */
+.aboutTerm--cursor {
+    display: inline-block;
+    width: 9px;
+    height: 1.05em;
+    transform: translateY(2px);
+    animation: aboutTermBlink 1.1s step-end infinite;
+}
+
+@keyframes aboutTermBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ---- chips de comandos clickeables ---- */
+.aboutTerm--chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+}
+
+.aboutTerm--hint {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+}
+
+.aboutTerm--chip {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.3rem 0.85rem;
+    border: 1.5px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* ---- cards que revela cada comando ---- */
+.aboutTerm--run {
+    margin: 0.9rem 0;
+}
+
+.aboutTerm--card {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background: #1e1e1e;
+    border-left: 3px solid #f03939;
+    border-radius: 8px;
+    animation: aboutTermCard 0.35s ease;
+}
+
+@keyframes aboutTermCard {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.aboutTerm--cardImg {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.aboutTerm--cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+}
+
+.aboutTerm--cardBody h4 {
+    font-family: var(--primaryFont);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.aboutTerm--cardBody p {
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.aboutTerm--cardBody a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.aboutTerm--stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+}
+
+.aboutTerm--stack span {
+    font-family: var(--primaryFont);
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+}
+
+.aboutTerm--expRow {
+    display: flex;
+    flex-direction: column;
+    padding: 0.35rem 0;
+}
+
+.aboutTerm--expRole {
+    font-family: var(--primaryFont);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.aboutTerm--expMeta {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.82rem;
+}
+
+.aboutTerm--hire {
+    flex-direction: column;
+    border-left-width: 3px;
+}
+
+.aboutTerm--hire .aboutTerm--cardBody {
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    .aboutTerm {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .aboutTerm--body {
+        padding: 1rem 1rem 1.2rem;
+        min-height: 300px;
+    }
+    .aboutTerm--line {
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+    .aboutTerm--barTitle {
+        font-size: 0.75rem;
+    }
+    /* las cards apilan imagen y texto en vertical */
+    .aboutTerm--card {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .aboutTerm--cardImg {
+        width: 100%;
+        height: 150px;
+    }
+    .aboutTerm--chips {
+        gap: 0.4rem;
+    }
+    .aboutTerm--chip,
+    .aboutTerm--hint {
+        font-size: 0.82rem;
+    }
+}

@@ -1,0 +1,32 @@
+.langSwitch {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 38px;
+    gap: 0.2rem;
+    padding: 0.2rem;
+    border-radius: 24px;
+    transition: opacity 0.3s;
+}
+
+.langSwitch--btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.35rem 0.9rem;
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .langSwitch {
+        padding: 0.2rem;
+    }
+    .langSwitch--btn {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.8rem;
+    }
+}

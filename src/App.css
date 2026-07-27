@@ -2,3 +2,23 @@
     --primaryFont: 'Poppins', sans-serif;
 }
 
+/* botones flotantes (WhatsApp + ir arriba) apilados y centrados en el
+   mismo eje vertical, esquina inferior derecha */
+.floatButtons {
+    position: fixed;
+    right: 24px;
+    bottom: 40px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+@media screen and (max-width: 800px) {
+    .floatButtons {
+        right: 16px;
+        bottom: 30px;
+    }
+}
+

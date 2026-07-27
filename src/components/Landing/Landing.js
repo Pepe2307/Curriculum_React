@@ -1,20 +1,38 @@
 import './Landing.css';
 
 import {
+    FaChevronDown,
     FaGithub,
     FaLinkedin,
 } from 'react-icons/fa';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 
 import { Button } from '@material-ui/core';
+import { LanguageContext } from '../../contexts/LanguageContext';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import cv from '../../assets/pdf/PabloPaez_Curriculum.pdf'
+import cvEs from '../../assets/pdf/PabloPaez_Curriculum.pdf'
 import { makeStyles } from '@material-ui/core/styles';
 import profilepic from '../../assets/png/profile.jpg'
+import { ui } from '../../data/translations'
+
+// TODO: cuando exista el CV en ingles, agregar el archivo a src/assets/pdf/
+// e importarlo aca en lugar de reutilizar el castellano.
+const cvEn = cvEs;
+
+const landingIntro = {
+    es: (
+        <>Desarrollador Backend con +6 años en IT. Actualmente a cargo de plataformas <b>ERP/MES</b> industriales y sistemas de <b>Supply Chain Management</b> para empresas internacionales, con operaciones de más de <b>$2M USD</b> anuales.<br/><br/>Becario TaiwánICDF 2024 y estudiante avanzado de la Lic. en Sistemas (UNGS).</>
+    ),
+    en: (
+        <>Backend Developer with 6+ years in IT. Currently leading industrial <b>ERP/MES</b> platforms and <b>Supply Chain Management</b> systems for international companies, handling over <b>$2M USD</b> in annual operations.<br/><br/>TaiwanICDF 2024 scholar and advanced Information Systems student (UNGS).</>
+    ),
+};
 
 function Landing() {
     const { theme, drawerOpen } = useContext(ThemeContext);
+    const { lang } = useContext(LanguageContext);
+    const tr = ui[lang];
 
     const useStyles = makeStyles((t) => ({
         resumeBtn: {
@@ -22,7 +40,10 @@ function Landing() {
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
+            width: 'auto',
+            minWidth: '160px',
+            padding: '0 1.3rem',
+            whiteSpace: 'nowrap',
             fontSize: '1rem',
             fontWeight: '500',
             height: '50px',
@@ -33,9 +54,6 @@ function Landing() {
                 backgroundColor: theme.tertiary,
                 color: theme.secondary,
                 border: `3px solid ${theme.tertiary}`,
-            },
-            [t.breakpoints.down('sm')]: {
-                width: '180px',
             },
         },
         contactBtn: {
@@ -63,6 +81,30 @@ function Landing() {
     }));
 
     const classes = useStyles();
+
+    const [cvOpen, setCvOpen] = useState(false);
+    const cvMenuRef = useRef(null);
+
+    // cierra el menu del CV al hacer click fuera o al presionar Escape
+    useEffect(() => {
+        if (!cvOpen) return;
+
+        const handleClick = (e) => {
+            if (cvMenuRef.current && !cvMenuRef.current.contains(e.target)) {
+                setCvOpen(false);
+            }
+        };
+        const handleKey = (e) => {
+            if (e.key === 'Escape') setCvOpen(false);
+        };
+
+        document.addEventListener('mousedown', handleClick);
+        document.addEventListener('keydown', handleKey);
+        return () => {
+            document.removeEventListener('mousedown', handleClick);
+            document.removeEventListener('keydown', handleKey);
+        };
+    }, [cvOpen]);
 
     return (
         <div className='landing'>
@@ -101,15 +143,17 @@ function Landing() {
                         
                     </div>
                 </div>
-                <img
-                    src={profilepic}
-                    alt=''
-                    className='landing--img'
-                    style={{
-                        opacity: `${drawerOpen ? '0' : '1'}`,
-                        borderColor: theme.secondary,
-                    }}
-                />
+                <div
+                    className='landing--imgWrap'
+                    style={{ opacity: `${drawerOpen ? '0' : '1'}` }}
+                >
+                    <img
+                        src={profilepic}
+                        alt=''
+                        className='landing--img'
+                        style={{ borderColor: theme.secondary }}
+                    />
+                </div>
                 <div
                     className='landing--container-right'
                     style={{ backgroundColor: theme.secondary }}
@@ -118,27 +162,55 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h6 className='skills_landing'>Desarrollador Backend</h6>
-                        <h6 className='skills_landing'>Programador</h6>
-                        <h6 className='skills_landing'>Profesor</h6>
+                        <h6 className='skills_landing'>{tr.landingRole1}</h6>
+                        <h6 className='skills_landing'>{tr.landingRole2}</h6>
+                        <h6 className='skills_landing'>{tr.landingRole3}</h6>
                         <h1>Pablo "Pepe" Paez💻</h1>
-                        <p>Más de 6 Años de experiencia en el mundo IT. Web developer orientado al Backend con Laravel y PHP, Profesor de Programacion, Robotica y Diseño 3D. Alumno destacado en la carrera de la Lic. en Sistemas
-                        </p>
-                        
+                        <p>{landingIntro[lang]}</p>
 
                         <div className='lcr-buttonContainer'>
-                            
-                                <a
-                                    href={cv}
-                                    download='Pablo Paez Curriculum'
-                                    target='_blank'
-                                    rel='noreferrer'
+
+                            <div className='cvMenu' ref={cvMenuRef}>
+                                <Button
+                                    className={classes.resumeBtn}
+                                    onClick={() => setCvOpen((prev) => !prev)}
+                                    aria-haspopup='true'
+                                    aria-expanded={cvOpen}
                                 >
-                                    <Button className={classes.resumeBtn}>
-                                        Descargar CV
-                                    </Button>
-                                </a>
-                            
+                                    {tr.landingDownload}
+                                    <FaChevronDown className='cvMenu--caret' />
+                                </Button>
+
+                                {cvOpen && (
+                                    <div
+                                        className='cvMenu--list'
+                                        style={{
+                                            backgroundColor: theme.secondary,
+                                            border: `2px solid ${theme.primary}`,
+                                        }}
+                                    >
+                                        <a
+                                            href={cvEs}
+                                            download='PabloPaez_CV_ES.pdf'
+                                            className='cvMenu--item'
+                                            style={{ color: theme.tertiary }}
+                                            onClick={() => setCvOpen(false)}
+                                        >
+                                            {tr.landingDownloadEs}
+                                        </a>
+                                        <a
+                                            href={cvEn}
+                                            download='PabloPaez_Resume_EN.pdf'
+                                            className='cvMenu--item'
+                                            style={{ color: theme.tertiary }}
+                                            onClick={() => setCvOpen(false)}
+                                        >
+                                            {tr.landingDownloadEn}
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
+
                             <NavLink
                                 to='/#contacts'
                                 smooth={true}
@@ -146,7 +218,7 @@ function Landing() {
                                 duration={2000}
                             >
                                 <Button className={classes.contactBtn}>
-                                    Contacto
+                                    {tr.landingContact}
                                 </Button>
                             </NavLink>
                         </div>

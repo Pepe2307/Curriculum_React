@@ -1,0 +1,33 @@
+.companiesBanner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.companiesBanner--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0.7rem;
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: transform 250ms ease-in-out;
+}
+
+.companiesBanner--item:hover {
+    transform: translateY(-4px);
+}
+
+.companiesBanner--name {
+    font-family: var(--primaryFont);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.companiesBanner--role {
+    font-family: var(--primaryFont);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-top: 0.15rem;
+}

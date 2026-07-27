@@ -1,0 +1,32 @@
+/* botón flotante de WhatsApp (posicionado por .floatButtons) */
+.whatsappBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #25D366;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsappBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.5);
+}
+
+.whatsappBtn--icon {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+    .whatsappBtn {
+        width: 48px;
+        height: 48px;
+    }
+    .whatsappBtn--icon {
+        font-size: 1.75rem;
+    }
+}
