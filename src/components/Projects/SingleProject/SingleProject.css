@@ -27,20 +27,86 @@
     font-family: var(--primaryFont);
     font-style: normal;
     font-weight: 600;
-    font-size: 1.525rem;
-    line-height: 110%;
+    font-size: 1.5rem;
+    line-height: 120%;
     text-align: center;
+    /* altura mínima pareja: la imagen arranca igual en cada card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.4rem;
+    padding: 0 0.6rem;
 }
 
-.projectContent > img {
+/* aclaración de qué es la empresa, debajo del título */
+.projectSubtitle {
+    font-family: var(--primaryFont);
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 120%;
+    margin-top: 0.15rem;
+    padding: 0 0.6rem;
+}
+
+/* cuando la card entera es un link al repositorio */
+.singleProject--link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* contenedor de la imagen: permite superponer logo y foto de contexto */
+.projectImgWrap {
+    position: relative;
     width: 100%;
     height: 60%;
     transition: opacity 0.7s 0.3s;
+}
+
+.projectImgWrap .projectImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
 }
 
-.singleProject:hover img{
+/* toda la imagen (con overlays) se desvanece al hover para revelar la descripción */
+.singleProject:hover .projectImgWrap {
     opacity: 0;
+}
+
+/* badge del logo de la empresa, arriba a la izquierda */
+.projectLogoBadge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 6px 9px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.projectLogoBadge > img {
+    width: 54px;
+    height: auto;
+    display: block;
+}
+
+/* mini foto de contexto (la fábrica), abajo a la derecha */
+.projectContextImg {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 96px;
+    height: 74px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
 }
 
 .project--showcaseBtn {

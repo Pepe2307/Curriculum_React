@@ -22,10 +22,10 @@ const cvEn = cvEs;
 
 const landingIntro = {
     es: (
-        <>Desarrollador Backend con +6 años en IT. Actualmente a cargo de plataformas <b>ERP/MES</b> industriales y sistemas de <b>Supply Chain Management</b> para empresas internacionales, con operaciones de más de <b>$2M USD</b> anuales.<br/><br/>Becario TaiwánICDF 2024 y estudiante avanzado de la Lic. en Sistemas (UNGS).</>
+        <>Desarrollador Backend con +3 años de experiencia haciendo sistemas. Especialista en plataformas <b>ERP/MES</b> industriales y sistemas <b>Supply Chain Management</b> para empresas nacionales e internacionales, con operaciones de más de <b>$2M USD</b> anuales.<br/><br/>Becario TaiwánICDF y estudiante avanzado en Sistemas.</>
     ),
     en: (
-        <>Backend Developer with 6+ years in IT. Currently leading industrial <b>ERP/MES</b> platforms and <b>Supply Chain Management</b> systems for international companies, handling over <b>$2M USD</b> in annual operations.<br/><br/>TaiwanICDF 2024 scholar and advanced Information Systems student (UNGS).</>
+        <>Backend Developer with 3+ years of experience building systems. Specialist in industrial <b>ERP/MES</b> platforms and <b>Supply Chain Management</b> systems for national and international companies, handling over <b>$2M USD</b> in annual operations.<br/><br/>TaiwanICDF scholar and advanced Systems student.</>
     ),
 };
 
@@ -165,7 +165,7 @@ function Landing() {
                         <h6 className='skills_landing'>{tr.landingRole1}</h6>
                         <h6 className='skills_landing'>{tr.landingRole2}</h6>
                         <h6 className='skills_landing'>{tr.landingRole3}</h6>
-                        <h1>Pablo "Pepe" Paez💻</h1>
+                        <h1>Pablo "Pepe" Paez</h1>
                         <p>{landingIntro[lang]}</p>
 
                         <div className='lcr-buttonContainer'>

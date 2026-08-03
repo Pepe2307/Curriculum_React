@@ -22,7 +22,7 @@ export const ui = {
         landingDownloadEn: 'Download CV',
 
         projectsTitle: 'Sistemas realizados',
-        projectsViewAll: 'Otros proyectos realizados',
+        projectsViewAll: 'Otros proyectos',
         projectsSearch: 'Filtrar proyectos',
         skillsTitle: 'Mis Habilidades',
         experienceTitle: 'Experiencia Laboral',
@@ -62,9 +62,9 @@ export const ui = {
         filterCountMany: 'proyectos',
 
         statYears: 'Años de experiencia en IT',
-        statStudents: 'Estudiantes alcanzados por año',
+        statStudents: 'Estudiantes alcanzados por año en el establecimiento actual UTEC',
         statUsd: 'Operaciones anuales gestionadas',
-        statEmployees: 'Empleados usando el ERP/MES',
+        statEmployees: 'Empleados usando los sistemas realizados',
         statInstitutions: 'Instituciones educativas',
 
         archLayerClients: 'Clientes',
@@ -88,7 +88,7 @@ export const ui = {
         navContact: 'Contact',
 
         landingRole1: 'Laravel Developer',
-        landingRole2: 'IT Teacher',
+        landingRole2: 'IT Professor',
         landingRole3: 'International Scholarship Holder',
         landingDownload: 'Download CV',
         landingContact: 'Contact',
@@ -100,7 +100,7 @@ export const ui = {
         projectsSearch: 'Filter projects',
         skillsTitle: 'My Skills',
         experienceTitle: 'Work Experience',
-        educationTitle: 'Professional Training',
+        educationTitle: 'Education',
         eduCatDeveloper: 'Developer',
         eduCatUniversity: 'University',
         eduCatTeaching: 'Teaching',
@@ -136,9 +136,9 @@ export const ui = {
         filterCountMany: 'projects',
 
         statYears: 'Years of experience in IT',
-        statStudents: 'Students reached per year',
+        statStudents: 'Students reached per year at UTEC (current institution)',
         statUsd: 'Annual operations managed',
-        statEmployees: 'Employees using the ERP/MES',
+        statEmployees: 'Employees using the systems I built',
         statInstitutions: 'Educational institutions',
 
         archLayerClients: 'Clients',

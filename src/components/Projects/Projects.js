@@ -73,11 +73,15 @@ function Projects() {
                                             theme={theme}
                                             id={project.id}
                                             name={pick(project.projectName)}
+                                            subtitle={pick(project.subtitle)}
                                             desc={pick(project.projectDesc)}
                                             tags={project.tags}
                                             code={project.code}
                                             demo={project.demo}
+                                            repo={project.repo}
                                             image={project.image}
+                                            logo={project.logo}
+                                            contextImage={project.contextImage}
                                             animate={false}
                                         />
                                     </div>

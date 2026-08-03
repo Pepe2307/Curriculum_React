@@ -39,10 +39,6 @@ function Languages() {
 
                             <h2 style={{color: theme.tertiary}}>{pick(item.language)}</h2>
 
-                            <span className="language--descriptor" style={{color: theme.tertiary80}}>
-                                {pick(item.descriptor)}
-                            </span>
-
                             {item.source && (
                                 <span className="language--source" style={{color: theme.tertiary50}}>
                                     {pick(item.source)}

@@ -1,6 +1,9 @@
+import React from 'react'
+
 export const experienceData = [
     {
         id: 1,
+        category: 'developer',
         role: {
             es: 'Laravel Developer',
             en: 'Laravel Developer',
@@ -8,41 +11,43 @@ export const experienceData = [
         company: { es: 'OSOLE', en: 'OSOLE' },
         period: { es: 'Ene 2024 - Presente', en: 'Jan 2024 - Present' },
         summary: {
-            es: 'A cargo de dos sistemas enterprise en producción para empresas internacionales.',
-            en: 'Responsible for two enterprise systems in production for international companies.',
+            es: 'A cargo de 4 sistemas enterprise completados para empresas nacionales e internacionales.',
+            en: 'In charge of 4 completed enterprise systems for national and international companies.',
         },
         highlights: {
             es: [
-                'Plásticos Castro Hermanos — Plataforma ERP/MES industrial: arquitecto y desarrollador full-stack de un sistema para manufactura de plásticos con más de 200 empleados.',
-                'Seguimiento en tiempo real de líneas de producción duales, integración de planificación con monitoreo de maquinaria y gestión de inventario multi-depósito con trazabilidad por lotes.',
-                'Tableros de control de calidad con seguimiento de defectos, logística de despacho, flujos de trabajo de autorización basados en roles (RBAC) y gestión de RR.HH.',
-                'Idea Iluminación — Sistema de Gestión de Comercio Internacional: plataforma integral de Supply Chain Management para operaciones de importación y exportación de tecnologías de iluminación hacia Argentina, gestionando transacciones anuales de más de $2M USD.',
-                'Ciclo de vida de Órdenes de Compra, consolidación de envíos, portal de proveedores, integración con agentes de carga y motor de reglas de negocio para flujos de trabajo personalizados por cliente.',
+                <><b>Plásticos Castro Hermanos</b> — Plataforma ERP/MES para manufactura de plásticos (+200 empleados): producción en tiempo real, inventario multi-depósito con trazabilidad, control de calidad, despacho, RBAC y RR.HH.</>,
+                <><b>Idea Iluminación</b> — Supply Chain para importación y exportación de iluminación (+$2M USD/año): órdenes de compra, consolidación de envíos, portal de proveedores y motor de reglas de negocio.</>,
+                <><b>Fleb</b> — Sistema de gestión para distribuidora de productos industriales: ciclo completo de pedido a entrega (recolección, fraccionamiento, control y embalaje, reparto por zonas y transportistas), gestión comercial (presupuestos, cobranzas, recibos) y planificación de visitas con objetivos por vendedor.</>,
+                <><b>Talleres IPAM</b> — Plataforma de gestión para distribuidora industrial: administra el flujo desde el pedido hasta la entrega (armado, fraccionado, control de calidad y embalaje, logística de reparto por zonas y transportistas), el área comercial (presupuestos, recibos y cobranzas) y la agenda de visitas con metas por vendedor.</>,
             ],
             en: [
-                'Plásticos Castro Hermanos — Industrial ERP/MES platform: architect and full-stack developer of a system for plastics manufacturing with more than 200 employees.',
-                'Real-time tracking of dual production lines, planning integration with machinery monitoring, and multi-warehouse inventory management with batch traceability.',
-                'Quality control dashboards with defect tracking, dispatch logistics, role-based authorization workflows (RBAC) and HR management.',
-                'Idea Iluminación — International Trade Management System: comprehensive Supply Chain Management platform for import and export operations of lighting technologies into Argentina, handling more than $2M USD in annual transactions.',
-                'Purchase Order lifecycle, shipment consolidation, supplier portal, freight forwarder integration and a business rules engine for client-specific workflows.',
+                <><b>Plásticos Castro Hermanos</b> — ERP/MES platform for plastics manufacturing (200+ employees): real-time production, multi-warehouse inventory with traceability, quality control, dispatch, RBAC and HR.</>,
+                <><b>Idea Iluminación</b> — Supply Chain for lighting import & export (+$2M USD/yr): purchase orders, shipment consolidation, supplier portal and a business rules engine.</>,
+                <><b>Fleb</b> — Management system for an industrial products distributor: full order-to-delivery cycle (picking, splitting, quality control and packaging, zone- and carrier-based dispatch), sales management (quotes, collections, receipts) and visit planning with per-salesperson targets.</>,
+                <><b>Talleres IPAM</b> — Management platform for an industrial distributor: handles the flow from order to delivery (assembly, splitting, quality control and packaging, zone- and carrier-based dispatch logistics), the sales area (quotes, receipts and collections) and the visit schedule with per-salesperson goals.</>,
             ],
         },
-        stack: ['Laravel', 'PHP', 'MySQL', 'Livewire', 'Docker'],
+        stack: {
+            es: ['Laravel', 'PHP', 'MySQL', 'Docker', 'Linux', 'Manejo de servidores'],
+            en: ['Laravel', 'PHP', 'MySQL', 'Docker', 'Linux', 'Server management'],
+        },
     },
     {
         id: 2,
+        category: 'docente',
         role: {
             es: 'Profesor IT — Trayectoria en 5 instituciones',
-            en: 'IT Teacher — Track record across 5 institutions',
+            en: 'IT Professor — Track record across 5 institutions',
         },
         company: {
-            es: 'Chalin Tech · C. Jorge Luis Borges · UTEC · C. Tato · C. Divina Pastora',
-            en: 'Chalin Tech · C. Jorge Luis Borges · UTEC · C. Tato · C. Divina Pastora',
+            es: 'UTEC · Chalin Tech · C. Jorge Luis Borges · C. Tato · C. Divina Pastora',
+            en: 'UTEC · Chalin Tech · C. Jorge Luis Borges · C. Tato · C. Divina Pastora',
         },
         period: { es: 'Dic 2021 - Presente', en: 'Dec 2021 - Present' },
         summary: {
-            es: 'Project Manager de Contenidos Curriculares en Centro Loyola y UTEC.',
-            en: 'Curriculum Content Project Manager at Centro Loyola and UTEC.',
+            es: <b>Project Manager de Contenidos Curriculares en Centro Loyola y UTEC.</b>,
+            en: <b>Curriculum Content Project Manager at Centro Loyola and UTEC.</b>,
         },
         highlights: {
             es: [
@@ -63,6 +68,7 @@ export const experienceData = [
     },
     {
         id: 3,
+        category: 'developer',
         role: { es: 'Backend Developer', en: 'Backend Developer' },
         company: {
             es: 'UTEC - Usina Tecnológica San Miguel',
@@ -85,6 +91,7 @@ export const experienceData = [
     },
     {
         id: 4,
+        category: 'developer',
         role: { es: 'Backend Developer', en: 'Backend Developer' },
         company: {
             es: 'Municipalidad de San Miguel — Departamento Tecnológico',

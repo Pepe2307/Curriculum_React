@@ -55,11 +55,17 @@ function useCountUp(target, start, duration = 1600) {
 }
 
 const statsData = [
-    { id: 1, value: 6, prefix: '', suffix: '+', labelKey: 'statYears' },
-    { id: 2, value: 900, prefix: '', suffix: '+', labelKey: 'statStudents' },
-    { id: 3, value: 2, prefix: '$', suffix: 'M USD', labelKey: 'statUsd' },
-    { id: 4, value: 200, prefix: '', suffix: '+', labelKey: 'statEmployees' },
-    { id: 5, value: 5, prefix: '', suffix: '', labelKey: 'statInstitutions' },
+    { id: 1, value: 6, prefix: '', suffix: '+', labelKey: 'statYears', category: 'developer' },
+    { id: 3, value: 2, prefix: '$', suffix: 'M USD', labelKey: 'statUsd', category: 'developer' },
+    { id: 4, value: 500, prefix: '', suffix: '+', labelKey: 'statEmployees', category: 'developer' },
+    { id: 2, value: 900, prefix: '', suffix: '+', labelKey: 'statStudents', category: 'docencia' },
+    { id: 5, value: 5, prefix: '', suffix: '', labelKey: 'statInstitutions', category: 'docencia' },
+];
+
+// las dos categorías (reusa las etiquetas de Formación / Experiencia)
+const statGroups = [
+    { id: 'developer', key: 'eduCatDeveloper' },
+    { id: 'docencia', key: 'eduCatTeaching' },
 ];
 
 function StatCard({ stat, start, theme, tr }) {
@@ -87,9 +93,21 @@ function Metrics() {
 
     return (
         <div className="metrics" ref={ref}>
-            {statsData.map((stat) => (
-                <StatCard key={stat.id} stat={stat} start={inView} theme={theme} tr={tr} />
-            ))}
+            {statGroups.map((group) => {
+                const items = statsData.filter((s) => s.category === group.id);
+                return (
+                    <div className="metrics--group" key={group.id}>
+                        <h3 className="metrics--groupTitle" style={{ color: theme.primary }}>
+                            <span style={{ color: theme.tertiary50 }}>#</span> {tr[group.key]}
+                        </h3>
+                        <div className="metrics--grid">
+                            {items.map((stat) => (
+                                <StatCard key={stat.id} stat={stat} start={inView} theme={theme} tr={tr} />
+                            ))}
+                        </div>
+                    </div>
+                );
+            })}
         </div>
     );
 }

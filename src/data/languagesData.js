@@ -11,7 +11,7 @@ export const languagesData = [
         language: { es: 'Inglés', en: 'English' },
         badge: 'C2',
         descriptor: { es: 'Proficient', en: 'Proficient' },
-        source: 'EF SET',
+        source: 'EF SET education',
     },
     {
         id: 3,
@@ -25,9 +25,6 @@ export const languagesData = [
         language: { es: 'Chino', en: 'Chinese' },
         badge: 'A1',
         descriptor: { es: 'Principiante', en: 'Beginner' },
-        source: {
-            es: 'Asoc. Cultural Chino-Argentina',
-            en: 'Chinese-Argentine Cultural Assoc.',
-        },
+        source: 'Asoc. Cultural Chino-Argentina',
     },
 ]

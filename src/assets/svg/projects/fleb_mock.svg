@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Vista previa del sitio de Fleb">
+  <rect width="800" height="500" rx="14" fill="#1b1b1b"/>
+
+  <!-- barra de navegador -->
+  <rect x="0" y="0" width="800" height="52" rx="14" fill="#2a2a2a"/>
+  <rect x="0" y="38" width="800" height="14" fill="#2a2a2a"/>
+  <circle cx="28" cy="26" r="6" fill="#f03939"/>
+  <circle cx="48" cy="26" r="6" fill="#5a5a5a"/>
+  <circle cx="68" cy="26" r="6" fill="#5a5a5a"/>
+  <rect x="96" y="16" width="320" height="20" rx="10" fill="#3d3d3d"/>
+  <text x="112" y="31" font-family="Consolas, monospace" font-size="13" fill="#9a9a9a">flebsa.com.ar</text>
+
+  <!-- hero -->
+  <rect x="40" y="86" width="720" height="170" rx="10" fill="#2c2c2c"/>
+  <rect x="70" y="120" width="260" height="22" rx="6" fill="#f03939"/>
+  <rect x="70" y="156" width="360" height="12" rx="6" fill="#4a4a4a"/>
+  <rect x="70" y="178" width="300" height="12" rx="6" fill="#3d3d3d"/>
+  <rect x="70" y="206" width="130" height="30" rx="15" fill="#f03939"/>
+
+  <!-- tarjetas -->
+  <rect x="40" y="280" width="226" height="180" rx="10" fill="#2c2c2c"/>
+  <rect x="287" y="280" width="226" height="180" rx="10" fill="#2c2c2c"/>
+  <rect x="534" y="280" width="226" height="180" rx="10" fill="#2c2c2c"/>
+  <rect x="64" y="304" width="60" height="60" rx="12" fill="#f0393955"/>
+  <rect x="311" y="304" width="60" height="60" rx="12" fill="#f0393955"/>
+  <rect x="558" y="304" width="60" height="60" rx="12" fill="#f0393955"/>
+  <rect x="64" y="384" width="150" height="12" rx="6" fill="#4a4a4a"/>
+  <rect x="311" y="384" width="150" height="12" rx="6" fill="#4a4a4a"/>
+  <rect x="558" y="384" width="150" height="12" rx="6" fill="#4a4a4a"/>
+  <rect x="64" y="410" width="180" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="311" y="410" width="180" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="558" y="410" width="180" height="10" rx="5" fill="#3d3d3d"/>
+
+  <rect x="600" y="14" width="180" height="24" rx="12" fill="#f0393933"/>
+  <text x="690" y="31" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1" text-anchor="middle" fill="#f03939">VISTA PREVIA</text>
+</svg>

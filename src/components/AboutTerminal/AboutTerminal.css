@@ -73,6 +73,37 @@
     50% { opacity: 0; }
 }
 
+/* ---- output de comandos (texto plano, sin fondo) ---- */
+.aboutTerm--run {
+    margin: 0.4rem 0 0.2rem;
+}
+
+/* ---- input para tipear comandos ---- */
+.aboutTerm--promptForm {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.aboutTerm--promptForm > span {
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+.aboutTerm--input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 1.12rem;
+}
+
+.aboutTerm--input::placeholder {
+    color: #5a5a5a;
+}
+
 /* ---- chips de comandos clickeables ---- */
 .aboutTerm--chips {
     display: flex;
@@ -99,11 +130,7 @@
     transition: background-color 0.2s, color 0.2s;
 }
 
-/* ---- cards que revela cada comando ---- */
-.aboutTerm--run {
-    margin: 0.9rem 0;
-}
-
+/* ---- (dead) estilos de las cards viejas, ya no se usan ---- */
 .aboutTerm--card {
     display: flex;
     gap: 1rem;
@@ -214,6 +241,9 @@
     .aboutTerm--line {
         font-size: 0.92rem;
         line-height: 1.6;
+    }
+    .aboutTerm--input {
+        font-size: 0.92rem;
     }
     .aboutTerm--barTitle {
         font-size: 0.75rem;

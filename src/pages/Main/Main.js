@@ -1,4 +1,4 @@
-import { About, Contacts, Education, Experience, Landing, Languages, Navbar, Projects, Sketches, Skills } from '../../components'
+import { About, Contacts, Education, Experience, Landing, Languages, Navbar, Projects, Skills } from '../../components'
 import React, { useContext } from 'react'
 
 import { Helmet } from 'react-helmet'
@@ -24,7 +24,6 @@ function Main() {
             <About />
             <Languages />
             <Contacts />
-            <Sketches />
         </div>
     )
 }

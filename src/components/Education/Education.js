@@ -29,9 +29,6 @@ function Education() {
             <div className="education-group" key={catId}>
                 <h3 className="education-catTitle" style={{color: theme.primary}}>
                     <span style={{color: theme.tertiary50}}>#</span> {tr[catLabels[catId]]}
-                    <span className="education-catCount" style={{color: theme.tertiary50}}>
-                        {items.length}
-                    </span>
                 </h3>
                 <div className="education-grid">
                     {items.map(edu => (
@@ -54,19 +51,24 @@ function Education() {
             <h1 className="education-title" style={{color:theme.primary}}>{tr.educationTitle}</h1>
 
             <div className="education-columns">
-                {/* columna izquierda: certificaciones de developer */}
+                {/* columna izquierda: developer + docencia + tecnico */}
                 <div className="education-col">
                     {renderGroup('developer')}
-                </div>
-
-                {/* columna derecha: foto + universidad + docencia + tecnico */}
-                <div className="education-col">
-                    <div className="education-photo">
-                        <img src={educationPhoto} alt="Pablo Paez" style={{ borderColor: theme.primary }} />
-                    </div>
-                    {renderGroup('universidad')}
                     {renderGroup('profesor')}
                     {renderGroup('tecnico')}
+                </div>
+
+                {/* columna derecha: universidad + foto con epigrafe */}
+                <div className="education-col">
+                    {renderGroup('universidad')}
+                    <div className="education-photo">
+                        <img src={educationPhoto} alt="Pablo Paez" style={{ borderColor: theme.primary }} />
+                        <span className="education-photoCaption" style={{ color: theme.tertiary70 }}>
+                            {lang === 'es'
+                                ? 'Charla técnica en Taiwán.'
+                                : 'Technical talk in Taiwan.'}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

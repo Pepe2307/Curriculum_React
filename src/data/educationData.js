@@ -45,18 +45,17 @@ export const educationData = [
         startYear: '2024',
     },
     {
-        // UTN + Udemy + EducacionIT fusionados en una sola card
-        id: 4,
+        id: 9,
         category: 'developer',
         institution: {
-            es: <p>+ UTN - Desarrollo BackEnd Avanzado en PHP/SQL<br/>+ Udemy - 3 Certificados en Backend PHP Laravel<br/>+ EducacionIT - Javascript / Bases de Datos / Backend</p>,
-            en: <p>+ UTN - Advanced BackEnd Development in PHP/SQL<br/>+ Udemy - 3 Certificates in Backend PHP Laravel<br/>+ EducacionIT - Javascript / Databases / Backend</p>,
+            es: 'University of Helsinki - Finlandia',
+            en: 'University of Helsinki - Finland',
         },
         course: {
-            es: 'Certificaciones en Backend Development',
-            en: 'Backend Development Certifications',
+            es: 'Docker Containers & CI/CD — Full Stack Open',
+            en: 'Docker Containers & CI/CD — Full Stack Open',
         },
-        startYear: '2023-2024',
+        startYear: '2026',
     },
     {
         id: 6,
@@ -67,6 +66,20 @@ export const educationData = [
             en: 'Fullstack Web Development Program',
         },
         startYear: '2021',
+    },
+    {
+        // UTN + Udemy + EducacionIT fusionados en una sola card
+        id: 4,
+        category: 'developer',
+        institution: {
+            es: <p>+ UTN - Desarrollo BackEnd Avanzado en PHP/SQL<br/>+ Udemy - 3 Certificados en Backend PHP Laravel<br/>+ EducacionIT - Bases de Datos / Backend</p>,
+            en: <p>+ UTN - Advanced BackEnd Development in PHP/SQL<br/>+ Udemy - 3 Certificates in Backend PHP Laravel<br/>+ EducacionIT - Databases / Backend</p>,
+        },
+        course: {
+            es: 'Certificaciones en Backend Development',
+            en: 'Backend Development Certifications',
+        },
+        startYear: '2023-2024',
     },
 
     /* ---- Docencia ---- */

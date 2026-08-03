@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Vista previa del sitio de Talleres IPAM">
+  <rect width="800" height="500" rx="14" fill="#1b1b1b"/>
+
+  <!-- barra de navegador -->
+  <rect x="0" y="0" width="800" height="52" rx="14" fill="#2a2a2a"/>
+  <rect x="0" y="38" width="800" height="14" fill="#2a2a2a"/>
+  <circle cx="28" cy="26" r="6" fill="#f03939"/>
+  <circle cx="48" cy="26" r="6" fill="#5a5a5a"/>
+  <circle cx="68" cy="26" r="6" fill="#5a5a5a"/>
+  <rect x="96" y="16" width="340" height="20" rx="10" fill="#3d3d3d"/>
+  <text x="112" y="31" font-family="Consolas, monospace" font-size="13" fill="#9a9a9a">ipam-hnos.com.ar</text>
+
+  <!-- header con logo -->
+  <rect x="40" y="86" width="720" height="60" rx="10" fill="#2c2c2c"/>
+  <rect x="64" y="104" width="120" height="24" rx="6" fill="#f03939"/>
+  <rect x="560" y="108" width="60" height="16" rx="8" fill="#4a4a4a"/>
+  <rect x="636" y="108" width="60" height="16" rx="8" fill="#4a4a4a"/>
+
+  <!-- banner -->
+  <rect x="40" y="162" width="720" height="150" rx="10" fill="#2c2c2c"/>
+  <rect x="70" y="196" width="300" height="24" rx="6" fill="#eaeaea"/>
+  <rect x="70" y="234" width="380" height="12" rx="6" fill="#4a4a4a"/>
+  <rect x="70" y="256" width="320" height="12" rx="6" fill="#3d3d3d"/>
+  <rect x="70" y="282" width="140" height="26" rx="13" fill="#f03939"/>
+
+  <!-- servicios -->
+  <rect x="40" y="332" width="345" height="128" rx="10" fill="#2c2c2c"/>
+  <rect x="415" y="332" width="345" height="128" rx="10" fill="#2c2c2c"/>
+  <circle cx="86" cy="378" r="20" fill="#f0393955"/>
+  <circle cx="461" cy="378" r="20" fill="#f0393955"/>
+  <rect x="120" y="366" width="180" height="14" rx="7" fill="#4a4a4a"/>
+  <rect x="495" y="366" width="180" height="14" rx="7" fill="#4a4a4a"/>
+  <rect x="120" y="392" width="220" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="495" y="392" width="220" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="120" y="412" width="200" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="495" y="412" width="200" height="10" rx="5" fill="#3d3d3d"/>
+
+  <rect x="600" y="14" width="180" height="24" rx="12" fill="#f0393933"/>
+  <text x="690" y="31" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1" text-anchor="middle" fill="#f03939">VISTA PREVIA</text>
+</svg>

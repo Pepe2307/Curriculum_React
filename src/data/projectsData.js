@@ -10,16 +10,30 @@ import screenshot7 from '../assets/png/laravel_5.jpg'
 import screenshot8 from '../assets/png/laravel_4.jpg'
 import screenshot9 from '../assets/png/laravel_3_2.jpg'
 
-// Mockups temporales: reemplazar por capturas reales de los sistemas.
-import erpMock from '../assets/svg/projects/erp_mes_mock.svg'
-import supplyMock from '../assets/svg/projects/supply_chain_mock.svg'
+// Sistemas (capturas reales): screenshot + logo + foto de contexto
+import plasticoFabrica from '../assets/png/plasticos_castro_fabrica.jpg'
+import plasticoLogo from '../assets/png/plasticos_castro_logo.jpg'
+import plasticoSistema from '../assets/png/plasticos_castro_sistema.jpg'
+import ideaFabrica from '../assets/png/idea_fabrica.jpeg'
+import ideaLogo from '../assets/png/idea_logo.png'
+import ideaSistema from '../assets/png/idea_sistema.jpg'
+import flebFabrica from '../assets/png/fleb_fabrica.jpg'
+import flebLogo from '../assets/png/fleb_logo.png'
+import flebSistema from '../assets/png/fleb_sistema.jpg'
+import ipamFabrica from '../assets/png/ipam_fabrica.webp'
+import ipamLogo from '../assets/png/ipam_logo.png'
+import ipamSistema from '../assets/png/ipam_sistema.jpg'
 
 export const projectsData = [
     {
         id: 1,
         projectName: {
-            es: 'Plataforma ERP/MES Industrial - Plásticos Castro Hermanos',
-            en: 'Industrial ERP/MES Platform - Plásticos Castro Hermanos',
+            es: 'Plásticos Castro Hnos — ERP / MES',
+            en: 'Plásticos Castro Hnos — ERP / MES',
+        },
+        subtitle: {
+            es: 'Industria de manufactura plástica',
+            en: 'Plastics manufacturing company',
         },
         projectDesc: {
             es: 'Arquitecto y desarrollador full-stack de un sistema ERP/MES para manufactura de plásticos con más de 200 empleados. Incluye seguimiento en tiempo real de líneas de producción duales, integración de planificación con monitoreo de maquinaria, gestión de inventario multi-depósito con trazabilidad por lotes, tableros de control de calidad con seguimiento de defectos, logística de despacho, flujos de trabajo de autorización basados en roles (RBAC) y gestión de RR.HH.',
@@ -28,13 +42,20 @@ export const projectsData = [
         tags: ['Laravel', 'PHP', 'MySQL', 'Livewire', 'Docker'],
         code: '',
         demo: '',
-        image: erpMock,
+        repo: 'https://github.com/Pepe2307/plasticoscastro',
+        image: plasticoSistema,
+        logo: plasticoLogo,
+        contextImage: plasticoFabrica,
     },
     {
         id: 2,
         projectName: {
-            es: 'Sistema de Gestión de Comercio Internacional - Idea Iluminación',
-            en: 'International Trade Management System - Idea Iluminación',
+            es: 'Idea Iluminación — Supply Chain',
+            en: 'Idea Iluminación — Supply Chain',
+        },
+        subtitle: {
+            es: 'Importación y exportación de iluminación',
+            en: 'Lighting import & export company',
         },
         projectDesc: {
             es: 'Plataforma integral de Supply Chain Management para operaciones de importación y exportación de tecnologías de iluminación desde el exterior hacia Argentina, gestionando transacciones anuales de más de $2M USD. Desarrollé el ciclo de vida de las Órdenes de Compra, consolidación de envíos, portal de proveedores e integración con agentes de carga, junto con un motor de reglas de negocio para flujos de trabajo personalizados por cliente.',
@@ -43,7 +64,54 @@ export const projectsData = [
         tags: ['Laravel', 'PHP', 'MySQL', 'APIs'],
         code: '',
         demo: '',
-        image: supplyMock,
+        repo: 'https://github.com/Pepe2307/idea-iluminacion-sistema',
+        image: ideaSistema,
+        logo: ideaLogo,
+        contextImage: ideaFabrica,
+    },
+    {
+        id: 14,
+        projectName: {
+            es: 'Fleb — Sistema Web',
+            en: 'Fleb — Web System',
+        },
+        subtitle: {
+            es: 'Productos industriales',
+            en: 'Industrial products company',
+        },
+        projectDesc: {
+            es: 'Sistema de gestión para distribuidora de productos industriales: ciclo completo de pedido a entrega (recolección, fraccionamiento, control y embalaje, reparto por zonas y transportistas), gestión comercial (presupuestos, cobranzas, recibos) y planificación de visitas con objetivos por vendedor.',
+            en: 'Management system for an industrial products distributor: full order-to-delivery cycle (picking, splitting, quality control and packaging, zone- and carrier-based dispatch), sales management (quotes, collections, receipts) and visit planning with per-salesperson targets.',
+        },
+        tags: ['Laravel', 'PHP', 'MySQL'],
+        code: '',
+        demo: '',
+        repo: 'https://github.com/Pepe2307/fleb-productos-industriales',
+        image: flebSistema,
+        logo: flebLogo,
+        contextImage: flebFabrica,
+    },
+    {
+        id: 15,
+        projectName: {
+            es: 'Talleres IPAM — Sistema Web',
+            en: 'Talleres IPAM — Web System',
+        },
+        subtitle: {
+            es: 'Talleres y servicios industriales',
+            en: 'Industrial workshops & services',
+        },
+        projectDesc: {
+            es: 'Plataforma de gestión para distribuidora industrial: administra el flujo desde el pedido hasta la entrega (armado, fraccionado, control de calidad y embalaje, logística de reparto por zonas y transportistas), el área comercial (presupuestos, recibos y cobranzas) y la agenda de visitas con metas por vendedor.',
+            en: 'Management platform for an industrial distributor: handles the flow from order to delivery (assembly, splitting, quality control and packaging, zone- and carrier-based dispatch logistics), the sales area (quotes, receipts and collections) and the visit schedule with per-salesperson goals.',
+        },
+        tags: ['Laravel', 'PHP', 'MySQL'],
+        code: '',
+        demo: '',
+        repo: 'https://github.com/Pepe2307/sistema-talleres-ipam',
+        image: ipamSistema,
+        logo: ipamLogo,
+        contextImage: ipamFabrica,
     },
     {
         id: 3,

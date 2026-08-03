@@ -35,15 +35,27 @@
 
 .education-photo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 0.5rem;
 }
 
+.education-photoCaption {
+    display: block;
+    max-width: 320px;
+    margin-top: 0.7rem;
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.35;
+}
+
 .education-photo > img {
+    display: block;
     width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    max-width: 320px;
+    height: auto;
     border-radius: 18px;
     border: 3px solid;
     box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
@@ -142,6 +154,8 @@
 
 .education-details{
     margin-left: 0.6rem;
+    flex: 1;
+    min-width: 0;
 }
 
 .education-details > h6 {
@@ -161,6 +175,8 @@
     font-family: var(--primaryFont);
     font-size: 1.15rem;
     font-weight: 600;
+    text-align: right;
+    margin-top: 0.3rem;
 }
 
 .education-image {

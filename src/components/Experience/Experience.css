@@ -22,10 +22,27 @@
     font-family: var(--primaryFont);
 }
 
+/* dos líneas de tiempo: developer y docencia, en dos columnas */
+.experience--tracks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    align-items: start;
+}
+
+.experience--trackTitle {
+    font-family: var(--primaryFont);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-left: 3rem;
+    margin-bottom: 1.4rem;
+}
+
 .experience--timeline {
     position: relative;
     width: 100%;
-    max-width: 1000px;
     padding-left: 3rem;
 }
 
@@ -121,6 +138,14 @@
     font-weight: 500;
     padding: 0.35rem 0.9rem;
     border-radius: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    /* en pantallas chicas las dos columnas se apilan */
+    .experience--tracks {
+        grid-template-columns: 1fr;
+        max-width: 1000px;
+    }
 }
 
 @media screen and (max-width: 800px) {

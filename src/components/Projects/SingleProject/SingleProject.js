@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-function SingleProject({ id, name, desc, tags, code, demo, image, theme, animate = true }) {
+function SingleProject({ id, name, subtitle, desc, tags, code, demo, repo, image, logo, contextImage, theme, animate = true }) {
     const useStyles = makeStyles((t) => ({
         iconBtn: {
             display: 'flex',
@@ -47,7 +47,22 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme, animate
                     >
                         {name}
                     </h2>
-                    <img src={image ? image : null} alt={name} />
+                    {subtitle && (
+                        <p className='projectSubtitle' style={{ color: theme.tertiary80 }}>
+                            {subtitle}
+                        </p>
+                    )}
+                    <div className='projectImgWrap'>
+                        <img src={image ? image : null} alt={name} className='projectImg' />
+                        {logo && (
+                            <span className='projectLogoBadge'>
+                                <img src={logo} alt='' />
+                            </span>
+                        )}
+                        {contextImage && (
+                            <img className='projectContextImg' src={contextImage} alt='' />
+                        )}
+                    </div>
                     {/* los sistemas privados no tienen demo ni repo publico:
                         sin URL no se renderiza el enlace */}
                     <div className='project--showcaseBtn'>
@@ -118,9 +133,22 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme, animate
             </div>
     );
 
+    // si el proyecto define `repo`, toda la card es un link a ese repositorio
+    const content = repo ? (
+        <a
+            href={repo}
+            target='_blank'
+            rel='noreferrer'
+            className='singleProject--link'
+            aria-label={name}
+        >
+            {card}
+        </a>
+    ) : card;
+
     // Dentro del marquee las tarjetas se desplazan sin disparar eventos de
     // scroll, por lo que el reveal de react-reveal las dejaria invisibles.
-    return animate ? <Fade bottom>{card}</Fade> : card;
+    return animate ? <Fade bottom>{content}</Fade> : content;
 }
 
 export default SingleProject;

@@ -32,7 +32,7 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
                 <div className="education-details">
                     <h6 style={{color: theme.primary}}>{startYear}{endYear}</h6>
                     <h4 style={{color: theme.tertiary, fontSize:"23px"}}>{course}</h4>
-                    <h5 style={{color: theme.tertiary80, fontSize:"15px"}}>{institution}</h5>
+                    <h5 style={{color: theme.primary, fontSize:"16.5px", fontWeight: 700}}>{institution}</h5>
                 </div>
             </div>
         </Fade>        
